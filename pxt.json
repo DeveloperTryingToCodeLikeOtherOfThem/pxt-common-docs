@@ -17,7 +17,11 @@
         "docs/hardware.md",
         "docs/analyzing_code.md",
         "docs/binRange.md",
-        "docs/bpp.md"
+        "docs/bpp.md",
+        "docs/_getFactoryInstance.md",
+        "docs/cache.md",
+        "docs/exportModifier.md",
+        "docs/fixed-size.md"
     ],
     "preferredEditor": "tsprj",
     "languageRestriction": "javascript-only"
