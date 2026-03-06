@@ -29,7 +29,8 @@
         "docs/memory.md",
         "docs/internal_properties.md",
         "docs/monochrome.md",
-        "docs/ways-to-be-like-a-pro.md"
+        "docs/ways-to-be-like-a-pro.md",
+        "docs/serial-and-parallel.md"
     ],
     "preferredEditor": "tsprj",
     "languageRestriction": "javascript-only"
