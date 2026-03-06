@@ -27,7 +27,7 @@ Here is what you might see.
 
 I did fix the issue anyway, but if it persists, please make an issue here so you can tell me the bugs you found.
 
-Another way you could be able to avoid this error is by going to the pxt.json file (**Not Recommended**) and  for the version history itself there. You can tell where it is by
+Another way you could be able to avoid this error is by going to the pxt.json file (**Not Recommended**) for the version history itself there. You can tell where it is by
 seeing 2 decimals with a ones, tenths, and hundreths digit.
 
 <img width="786" height="17" alt="image" src="https://github.com/user-attachments/assets/174a7c33-4ef1-4c2a-932e-9a7cf4715561" />
