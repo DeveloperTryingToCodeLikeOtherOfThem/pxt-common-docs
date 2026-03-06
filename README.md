@@ -19,3 +19,4 @@ Here is what you might see.
 
 ![Screen recording 2026-03-06 12 22 32 AM](https://github.com/user-attachments/assets/a26fdcc6-121f-4476-b1da-6994b78ba431)
 
+I did find the issue anyway, but if it persists, please make an issue here.
