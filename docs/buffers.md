@@ -39,7 +39,11 @@ Big Endian stores the most significant byte at the lowest address, it is meant f
 
 * The Buffer.getUint8(offset: number) method is designed to read an unsigned number in a particular location in the buffer 
 
-* The Buffer.write(dstOffset: number, src: Buffer) method is designed to write contents of the buffer merged into the current buffer (the buffer your using) 
+* The Buffer.write(dstOffset: number, src: Buffer) method is designed to write contents of the buffer merged into the current buffer (the buffer your using)
+
+*  The Buffer.equals(other: Buffer) method checks if 2 buffers hold the same data
+
+*  The Buffer.chunk(maxSize: number): Buffer[] breaks the buffer into pieces, none exceeding the specified size. 
 
 * The Buffer.isReadOnly() method is designed to read if the buffer cannot be modified, otherwise it returns false
 
