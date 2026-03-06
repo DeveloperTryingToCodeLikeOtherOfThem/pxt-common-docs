@@ -35,6 +35,8 @@
         "docs/mixed-arrays.md",
         "docs/reading-makecode-docs-clearly.md"
     ],
+    "public": true
+    ,
     "preferredEditor": "tsprj",
     "languageRestriction": "javascript-only"
 }
