@@ -31,7 +31,7 @@
         "docs/monochrome.md",
         "docs/ways-to-be-like-a-pro.md",
         "docs/serial-and-parallel.md",
-        "docs/limit_of_offsets for_setNumber.md"
+        "docs/docs/limit_of_offsets_for_setNumber.md"
     ],
     "preferredEditor": "tsprj",
     "languageRestriction": "javascript-only"
