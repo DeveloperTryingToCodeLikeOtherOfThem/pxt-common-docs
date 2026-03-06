@@ -12,3 +12,5 @@ This happens if you did click on it.
 There are times where it is safe to update, but it depeneds. For example, there are many times where the best option to update without needing
 to import the extension again by clicking on a file that does not exist on another version and the other version does support it, which often
 MakeCode never made the version release back to an older version. It is still safer to not do it.
+
+Most of the users might cannot even access this repository in Microsoft MakeCode right now anyways, the only way to see is by seeing this respoitory instead. 
