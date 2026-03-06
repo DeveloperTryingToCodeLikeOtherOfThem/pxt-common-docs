@@ -14,3 +14,8 @@ to import the extension again by clicking on a file that does not exist on anoth
 MakeCode never made the version release back to an older version. It is still safer to not do it.
 
 Most of the users might cannot even access this repository in Microsoft MakeCode right now anyways, the only way to see is by seeing this respoitory instead. 
+
+Here is what you might see.
+
+![Screen recording 2026-03-06 12 22 32 AM](https://github.com/user-attachments/assets/a26fdcc6-121f-4476-b1da-6994b78ba431)
+
