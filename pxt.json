@@ -26,7 +26,10 @@
         "docs/for-loops-vs-for-element-loops.md",
         "docs/fixed_point.md",
         "docs/helperAnnotation.md",
-        "docs/memory.md"
+        "docs/memory.md",
+        "docs/internal_properties.md",
+        "docs/monochrome.md",
+        "docs/ways-to-be-like-a-pro.md"
     ],
     "preferredEditor": "tsprj",
     "languageRestriction": "javascript-only"
