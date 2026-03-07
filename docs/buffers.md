@@ -29,22 +29,22 @@ Big Endian stores the most significant byte at the lowest address, it is meant f
     
  
 
-* The Buffer.create(size: number) method is designed to store bytes in a fixed size.   
+* The Buffer.create(size: number) method stores bytes in a fixed size.   
 
-* The Buffer.setNumber(format: NumberFormat, offset: number, value: number) method is designed to write a number in a specified format in the buffer 
+* The Buffer.setNumber(format: NumberFormat, offset: number, value: number) method writes a number in a specified format in the buffer 
 
-* The Buffer.getNumber(format: NumberFormat, offset: number) method is designed to read a number in a specified format in the buffer 
+* The Buffer.getNumber(format: NumberFormat, offset: number) method reads a number in a specified format in the buffer 
 
-* The Buffer.setUint8(offset: number, value: number) method is designed to write an unsigned number in a particular location in the buffer 
+* The Buffer.setUint8(offset: number, value: number) method writes an unsigned number in a particular location in the buffer 
 
-* The Buffer.getUint8(offset: number) method is designed to read an unsigned number in a particular location in the buffer 
+* The Buffer.getUint8(offset: number) method reads an unsigned number in a particular location in the buffer 
 
-* The Buffer.write(dstOffset: number, src: Buffer) method is designed to write contents of the buffer merged into the current buffer (the buffer your using)
+* The Buffer.write(dstOffset: number, src: Buffer) method writes contents of the buffer merged into the current buffer (the buffer your using)
 
 *  The Buffer.equals(other: Buffer) method checks if 2 buffers hold the same data
 
-*  The Buffer.chunked(maxSize: number): Buffer[] breaks the buffer into pieces, none exceeding the specified size. 
+*  The Buffer.chunked(maxSize: number): Buffer[] method breaks the buffer into pieces, none exceeding the specified size. 
 
-* The Buffer.isReadOnly() method is designed to read if the buffer cannot be modified, otherwise it returns false
+* The Buffer.isReadOnly() method reads if the buffer cannot be modified, otherwise it returns false
 
-* The Buffer.length method is designed to return the total area of the buffer
+* The Buffer.length method returns the total area of the buffer
