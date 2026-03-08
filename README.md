@@ -39,3 +39,5 @@ seeing 2 decimals with a ones, tenths, and hundreths digit.
 **Disclaimer:  Proceed with caution when performing technical procedures related to software extensions, as incorrect steps may result in data loss or application errors.**
 
 **You can find a blog about this here.** https://askkesny.blogspot.com/?page=en-git-developertryingtocodelikeotherofthem-pxt-hardware-programming-docs-1772682036803
+
+<img width="1536" height="1024" alt="ChatGPT Image Mar 8, 2026, 02_33_44 PM" src="https://github.com/user-attachments/assets/76e7f5b6-d18d-454e-91d2-61b62e56921d" />
