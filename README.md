@@ -2,9 +2,6 @@
 
 for PXT/arcade
 
-<img width="1248" height="832" alt="526f964b-0908-49e6-abb9-452eacb7bedd" src="https://github.com/user-attachments/assets/17851e52-7f30-453c-a990-9f14cf853d3d" />
-
-
 
 This repository is meant for explaining how to code the engine in Microsoft MakeCode Arcade. This package does **NOT** connect to MakeCode's offical runtime docs, it is for local and to access the docs, you view the documentation here. This can work properly by clicking the doc and seeing any of the .md files or go to your local MakeCode website and searching for this teaching extension and then view the files in the bottom of the explorer tab which you will see it say this extensions title, and then finding the md file by clicking the dropdown menu in the right of the title and the release (the number in the right of the title which has 2 decimals between all 3 digits). You would also see a trash can between both, please do not click it because it would permantly delete the extension in your editor to access. The only way to get the extension back is by using this extension's link and pasting it back to the extensions tab and browsing the extension so you can read any docs in the extension again. **Note that this repository can be able used by using the JavaScript tab. This is  because it is required to be in the explorer tab which blocks are unable to view.** There are some files unsupported for makecode's environment to handle even if it just to view the code implementation doc in the platform editor, so I still recommend the first one which I explained about how to view it on github (this platform). 
 
