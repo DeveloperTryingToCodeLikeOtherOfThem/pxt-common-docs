@@ -6,5 +6,35 @@
     "type": "git",
     "url": "git+https://github.com/DeveloperTryingToCodeLikeOtherOfThem/pxt-hardware-programming-docs.git"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "files": {
+        "README.md",
+        "docs/buffers.md",
+        "docs/allocate.md",
+        "docs/binary.md",
+        "docs/unary.md",
+        "docs/decoder.md",
+        "docs/fixed-size.md",
+        "docs/fixedArray.md",
+        "docs/hardware.md",
+        "docs/analyzing_code.md",
+        "docs/binRange.md",
+        "docs/bpp.md",
+        "docs/_getFactoryInstance.md",
+        "docs/cache.md",
+        "docs/exportModifier.md",
+        "docs/helpers.md",
+        "docs/for-loops-vs-for-element-loops.md",
+        "docs/fixed_point.md",
+        "docs/helperAnnotation.md",
+        "docs/memory.md",
+        "docs/internal_properties.md",
+        "docs/monochrome.md",
+        "docs/ways-to-be-like-a-pro.md",
+        "docs/serial-and-parallel.md",
+        "docs/history-of-bytes.md",
+        "docs/string.md",
+        "docs/mixed-arrays.md",
+        "docs/reading-makecode-docs-clearly.md"
+  }
 }
