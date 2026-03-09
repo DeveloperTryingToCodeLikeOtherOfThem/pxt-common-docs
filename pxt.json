@@ -34,7 +34,8 @@
         "docs/history-of-bytes.md",
         "docs/string.md",
         "docs/mixed-arrays.md",
-        "docs/reading-makecode-docs-clearly.md"
+        "docs/reading-makecode-docs-clearly.md",
+        "docs/twoCollons.md"
     ],
     "public": true,
     "preferredEditor": "tsprj",
