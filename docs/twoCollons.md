@@ -1,3 +1,3 @@
-In Microsoft MakeCode Arcade, the 2 collons are represented often in the C++ language.
-The collons allow you to access a function or property that is accessed in a namespace,
-instead of using the dot operator for accessing the field.
+In Microsoft MakeCode Arcade, the double colon (`::`) is used often in C++.
+The operator, called the scope resolution operator, allows you to access a function or property within a namespace.
+It is distinct from the dot operator (`.`), which is used to access members of an object instance.
