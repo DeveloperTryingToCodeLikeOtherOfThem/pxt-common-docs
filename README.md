@@ -18,7 +18,7 @@ Here is an image of the thing I recommend to **not** click.
 This happens if you did click on it.
 ![Screen recording 2026-03-05 9 41 48 PM](https://github.com/user-attachments/assets/3ce2f31e-3d2b-485c-838a-85529e61e2f1)
 
-There are times where it is safe to update, but it depeneds. For example, there are many times where the best option to update without needing
+There are times when it is safe to update, but it depends. For example, there are many times where the best option to update without needing
 to import the extension again by clicking on a file that does not exist on another version and the other version does support it, which often
 MakeCode never made the version release back to an older version. It is still safer to not do it.
 
