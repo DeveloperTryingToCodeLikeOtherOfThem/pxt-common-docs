@@ -1,6 +1,7 @@
 {
     "name": "pxt-hardware-programming-docs",
     "description": "A documentation teaching core runtime components and methods/properties.",
+    "version": "1.9.2",
     "dependencies": { 
         "device": "*"
     },
