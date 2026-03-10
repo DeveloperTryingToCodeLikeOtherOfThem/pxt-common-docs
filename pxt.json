@@ -9,7 +9,7 @@
         "main.ts",
         "README.md",
         "test.ts",
-        "LICENSE",
+         "license": "MIT",
         "docs/buffers.md",
         "docs/allocate.md",
         "docs/binary.md",
