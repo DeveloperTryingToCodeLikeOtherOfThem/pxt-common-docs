@@ -6,7 +6,7 @@ how you can access these properties. **I am not showing all hidden properties an
 Here is a list of properties and methods that can be accessed, but have an underscore to make them hidden.
 
 **Warning**, this is **NOT** for beginners, this is for developers that have knowledge to all high and middle level functions, properties, and 
-knowing how to code correctly. If this is your first time for coding or using the typescript language, **please do NOT read this list.**
+knowing how to code correctly. If this is your first time for coding or using the typescript language, **please do NOT read the list.**
 
 1.  sprite._x: Fx8
 2.  sprite._y: Fx8
