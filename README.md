@@ -2,7 +2,7 @@
 
 for PXT/arcade
 
-This repository can be added as an **extension** in MakeCode.
+This repository can be added as an **extension** in MakeCode Arcade.
 
 1. open https://arcade.makecode.com/
 2. click on New Project
