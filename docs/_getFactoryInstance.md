@@ -13,3 +13,6 @@ function renderImage(lits: any, ...args: any[]): Image{
 }
 ```
 
+``` package
+pxt-hardware-programming-docs=github:DeveloperTryingToCodeLikeOtherOfThem/pxt-hardware-programming-docs
+```
