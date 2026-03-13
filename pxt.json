@@ -1,10 +1,7 @@
 {
     "name": "pxt-hardware-programming-docs",
     "description": "A documentation teaching core runtime components and methods/properties.",
-    "version": "2.2.6",
-    "dependencies": { 
-        "device": "*"
-    },
+    "version": "2.2.6,
      "license": "MIT",
     "files": [
         "main.ts",
