@@ -1,7 +1,6 @@
 {
     "name": "pxt-hardware-programming-docs",
     "description": "A documentation teaching core runtime components and methods/properties.",
-    "version": "2.2.5",
      "license": "MIT",
     "files": [ 
         "main.ts",
@@ -44,9 +43,5 @@
         "docs/_onCodeStop.md"
     ],
     "public": true,
-    "preferredEditor": "tsprj",
-     "supportedTargets": [
-         "arcade", 
-         "microbit"
-     ]
+    "preferredEditor": "tsprj"
 }
