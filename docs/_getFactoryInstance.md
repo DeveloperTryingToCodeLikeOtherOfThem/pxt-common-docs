@@ -12,7 +12,3 @@ function renderImage(lits: any, ...args: any[]): Image{
  return null // were returning null because it is meant to have nothing returned before you call the method
 }
 ```
-
-``` package
-pxt-hardware-programming-docs=github:DeveloperTryingToCodeLikeOtherOfThem/pxt-hardware-programming-docs
-```
