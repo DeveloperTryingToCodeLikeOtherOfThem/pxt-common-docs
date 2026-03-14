@@ -1,6 +1,6 @@
 {
   "name": "pxt-hardware-docs",
-  "version": "1.9.5",
+  "version": "2.2.3",
   "description": "A package for learning all low level methods, properties, performance, and more.",
   "repository": {
     "type": "git",
