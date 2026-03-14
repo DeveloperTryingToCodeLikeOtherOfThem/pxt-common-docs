@@ -5,4 +5,5 @@ function.
 Here is the shim for getting this function.
 
 `//% shim=pxt::throwValue` 
+
 You could think of it as you are driving into a secret place. 🚙
