@@ -7,3 +7,10 @@ Here is the shim path.
 `//% shim=pxt::thrownValue`
 
 There is a `control.assert` function, but it is too high level and different compared to this function.
+
+Here is a snippet showing the source of code.
+
+``` ts
+    //% shim=pxt::thrownValue
+    declare function assert(): void;
+```
