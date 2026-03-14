@@ -9,13 +9,14 @@ This repository can be added as an **extension** in MakeCode Arcade.
 3. click on Extensions under the gearwheel menu
 4. search for **https://github.com/developertryingtocodelikeotherofthem/pxt-hardware-programming-docs** and import
 
-This repository is meant for explaining how to code the engine in Microsoft MakeCode Arcade. This package does **NOT** connect to MakeCode's offical runtime docs, it is for local and to access the docs, you view the documentation here. This can work properly by clicking the doc and seeing any of the .md files or go to your local MakeCode website and searching for this teaching extension and then view the files in the bottom of the explorer tab which you will see it say this extensions title, and then finding the md file by clicking the dropdown menu in the right of the title and the release (the number in the right of the title which has 2 decimals between all 3 digits). You would also see a trash can between both, please do not click it because it would permantly delete the extension in your editor to access. The only way to get the extension back is by using this extension's link and pasting it back to the extensions tab and browsing the extension so you can read any docs in the extension again. This repository finally does **not** need to be viewed only in the JavaScript tab because MakeCode's cached memory is finally being fixed. But if this error has been happened again, read this note here. **Please read by clicking on the JavaScript tab, and then clicking the dropdown menu arrow beside the text showing "explorer". Then, scroll down all the way below until it shows this repository's name. Finally, click on the dropdown menu beside this extension's name so you can see all the markdown file content there. You must read at least 1 file to make MakeCode understand what package to really fetch.** There are some files unsupported for makecode's environment to handle even if it just to view the code implementation doc in the platform editor, so I still recommend the first one which I explained about how to view it on github (this platform). 
+This repository is meant for explaining how to code the engine in Microsoft MakeCode Arcade. This package does **NOT** connect to MakeCode's offical runtime docs, it is for local and to access the docs, you view the documentation here. This can work properly by clicking the doc and seeing any of the .md files or go to your local MakeCode website and searching for this teaching extension and then view the files in the bottom of the explorer tab which you will see it say this extensions title, and then finding the md file by clicking the dropdown menu in the right of the title and the release (the number in the right of the title which has 2 decimals between all 3 digits). You would also see a trash can between both, please do not click it because it would permantly delete the extension in your editor to access. The only way to get the extension back is by using this extension's link and pasting it back to the extensions tab and browsing the extension so you can read any docs in the extension again. This repository has been updated 
+and now **not** supported in any PXT target for documentation. It is now a repository you can view **only** in this repository. I did this mainily
+because there were many cached issues and limitations of how MakeCode parses and stores huge packaged files. So now if you want to view this repository,you view it **only** here.
 
 ## Support
-This extension works in Microsoft MakeCode Arcade. While it works fine now,
-if there are errors occur, open an issue on the repository (pxt-hardware-programming-docs).
-## Procedures To Be Aware Of
+This extension **does not** work in any MakeCode editor. 
 
+~~## Procedures To Be Aware Of
 Updating Could Destroy Your Imported Extension: **Warning**, do not refresh the release of the package because it could break multiple files, so just avoid updating the release. The safest way to
 have the version updated in case if the extension has been updated again, just paste the link of this repository into the extension's link to make it safer for the latest version of this package.
  
@@ -43,7 +44,7 @@ seeing 2 decimals with a ones, tenths, and hundreths digit.
 <img width="786" height="17" alt="image" src="https://github.com/user-attachments/assets/174a7c33-4ef1-4c2a-932e-9a7cf4715561" />
 
 
-**Disclaimer:  Proceed with caution when performing technical procedures related to software extensions, as incorrect steps may result in data loss or application errors.**
+**Disclaimer:  Proceed with caution when performing technical procedures related to software extensions, as incorrect steps may result in data loss or application errors.**~~
 
 **You can find a blog about this here.** [pxt-hardware-programming-docs-issue-request](https://askkesny.blogspot.com/?page=en-git-developertryingtocodelikeotherofthem-pxt-hardware-programming-docs-1772682036803)
 
