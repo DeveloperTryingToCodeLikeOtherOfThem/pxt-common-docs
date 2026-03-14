@@ -1,6 +1,6 @@
 {
   "name": "pxt-hardware-docs",
-  "version": "2.2.3",
+  "version": "v2.4.3",
   "description": "A package for learning all low level methods, properties, performance, and more.",
   "repository": {
     "type": "git",
@@ -36,5 +36,8 @@
         "docs/string.md",
         "docs/mixed-arrays.md",
         "docs/reading-makecode-docs-clearly.md"
+  },
+  "publishConfig": {
+  "registry": "https://npm.pkg.github.com/"
   }
 }
