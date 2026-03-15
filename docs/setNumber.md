@@ -9,6 +9,7 @@ Offset: The zero-based byte position within the buffer.
 
 Value: The meaning of the index.
 
+## Example
 ``` ts
    const buf = Buffer.create(5);
    buf.setNumber(NumberFormat.Int8LE, 0, 5);
