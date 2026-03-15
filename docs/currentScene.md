@@ -7,6 +7,10 @@ Manages scenes in the game. The current scene is the active scene that is runnin
 
  ## Example
 
+ ```` blocks
+  game.currentScene().allSprites; 
+```
+
  ``` ts
    game.currentScene().allSprites;
  ```
