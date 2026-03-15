@@ -14,4 +14,3 @@ Here is a snippet showing it correctly.
     //% shim=pxt::getThrownValue
     declare function assert(): void;
 ```
-![Screenshot](docs/Screenshot%202026-03-14%208.18.09%20PM.png)
