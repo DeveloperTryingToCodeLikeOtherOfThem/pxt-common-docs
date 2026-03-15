@@ -1,6 +1,6 @@
 ## Get Number
 
-Reads a valueat a specfic location (offset) in the buffer.
+Reads a value at a specfic location (offset) in the buffer.
 
 ## Parameters
 Format: How many bytes the number uses, whether it is signed or unsigned, and whether it is little endian or big endian.
