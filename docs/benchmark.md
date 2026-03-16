@@ -3,7 +3,7 @@ A test that measures how fast something runs in microseconds.
 
 ## Parameters
 
-* f: the handler to run the containing code for measuring.
+* f: the handler that runs the function
 
 ## Example
 
