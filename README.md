@@ -19,7 +19,8 @@ because there were many cached issues and limitations of how MakeCode parses and
 
 ## Support
 This extension **does not** work in any MakeCode editor because of the issues that were encountered in pxt.json. 
-Because of that, you have to review everything here instead. Also, tags and releases will still be updated, so do **not** worry about that.
+Because of that, you have to review everything here instead. Also, tags and releases will still be updated, so do **not** worry about that. If you have any questions about this repository, please click on this link here. [Issues: Click Here](https://github.com/DeveloperTryingToCodeLikeOtherOfThem/pxt-hardware-programming-docs/issues.) Please do **not** worry if you have questions because it is part of this repository too.
+
 ## ~~Procedures To Be Aware Of~~
 ~~Updating Could Destroy Your Imported Extension: **Warning**, do not refresh the release of the package because it could break multiple files, so just avoid updating the release. The safest way to
 have the version updated in case if the extension has been updated again, just paste the link of this repository into the extension's link to make it safer for the latest version of this package.~~
