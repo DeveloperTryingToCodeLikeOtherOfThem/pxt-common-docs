@@ -17,7 +17,9 @@ In C++:
 ``` cpp
   DMESG("HELLO!")
 ```
-Both of these can be sort of like being relative, but it is more accurate by saying "directly related", which tells us
+
+## TypeScript vs C++ for logging
+In both languages, Both of these can be sort of like being relative, but it is more accurate by saying "directly related", which tells us
 they are very similar.
 
 ~~## Things that are unfinished for this content~~
