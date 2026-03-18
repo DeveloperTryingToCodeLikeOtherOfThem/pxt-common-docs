@@ -13,7 +13,7 @@ The function does not belong to only one PXT target, it exists in all PXT target
 ```
 
 ``` cpp
-  DMESG()
+  DMESG("HELLO!")
 ```
 
 ~~## Things that are unfinished for this content~~
