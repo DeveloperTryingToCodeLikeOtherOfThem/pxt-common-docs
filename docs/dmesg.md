@@ -17,6 +17,8 @@ In C++:
 ``` cpp
   DMESG("HELLO!")
 ```
+Both of these can be sort of like being relative, but it is more accurate by saying "directly related", which tells us
+they are very similar.
 
 ~~## Things that are unfinished for this content~~
 ~~Things that are pending: Please be patient for waiting where the dmesg logger is logged because I am still researching information about that, so be patient.~~
