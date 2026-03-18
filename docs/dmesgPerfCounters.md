@@ -5,6 +5,7 @@
 ```
 
 Print values of the runtime's performance counters
+
 Counter: a number that increases every time an event occurs.
 
 ## Example
