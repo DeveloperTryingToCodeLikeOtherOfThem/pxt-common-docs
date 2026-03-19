@@ -2,11 +2,6 @@ The MakeCode editor auto generates the custom namespace code by
 creating a custom file constant and a custom file text constant (the source snippet) .
 
 ``` ts
-interface FileListState {
-    currentFile?: IFile;
-    expandedPkg?: string;
-}
-
 const customFile = "custom.ts";
 const customFileText = `
 enum MyEnum {
@@ -48,8 +43,4 @@ const customFileHeader = (homeUrl: string) => `
 * ${lf("Read more at {0}", homeUrl + 'blocks/custom')}
 */
 `
-
-export class FileList extends data.Component<ISettingsProps, FileListState> {
-   // Add core here
-}
 ```
