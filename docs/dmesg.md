@@ -2,7 +2,10 @@
 
 DMESG (**short for diagnostic messages that is an internal debugging tool**) are communication log channels.
 DMESG and LOG are totally different logging tools because DMESG is a system-level debugging tool (**refers to as I mentioned previously**), but
-log is a high-level function used to print your own messages. To find the output of the DMESG debugging tool, open your browser's 
+log is a high-level function used to print your own messages. 
+
+## DMESG LOGGING
+To find the output of the DMESG debugging tool, open your browser's 
 developer tool (F12 in most browsers), then click the console tab, and finally run your program in the simulator.
 The function does not belong to only one PXT target, it exists in all PXT targets.
 
