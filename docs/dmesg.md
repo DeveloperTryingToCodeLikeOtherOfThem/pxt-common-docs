@@ -5,9 +5,12 @@ DMESG and LOG are totally different logging tools because DMESG is a system-leve
 log is a high-level function used to print your own messages. 
 
 ## DMESG LOGGING
+# In The Browser
 To find the output of the DMESG debugging tool, open your browser's 
 developer tool (F12 in most browsers), then click the console tab, and finally run your program in the simulator.
 The function does not belong to only one PXT target, it exists in all PXT targets.
+# In Hardware
+To find the output of the DMESG debugging tool,view this with a serial monitor conected to the device's debug connector.
 
 ## Example 
 
