@@ -1,5 +1,5 @@
 The MakeCode editor auto generates the custom namespace code by 
-creating a custom file constant and a custom file text constant (the source snippet) .
+creating a custom file constant and a custom file (automatically generates as custom.ts because it is a custom typescript file), and a text constant (the source snippet) .
 
 ``` ts
 const customFile = "custom.ts";
