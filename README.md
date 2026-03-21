@@ -54,7 +54,7 @@ seeing 2 decimals with a ones, tenths, and hundreths digit.~~
 
 ~~<img width="786" height="17" alt="image" src="https://github.com/user-attachments/assets/174a7c33-4ef1-4c2a-932e-9a7cf4715561" />~~
 
-Thanks to how the MakeCode Team made the web editor.
+Thanks to the MakeCode Team that made the web editor.
 
 
 ~~**Disclaimer:  Proceed with caution when performing technical procedures related to software extensions, as incorrect steps may result in data loss or application errors.**~~
