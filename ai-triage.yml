@@ -19,8 +19,7 @@ jobs:
   activation:
     needs: pre_activation
     if: >
-      (needs.pre_activation.outputs.activated == 'true') && ((github.event_name != 'issues') || ((github.event.action != 'labeled') ||
-      (github.event.label.name == 'ai-triage')))
+      (github.event.label.name == 'ai-triage')
     runs-on: ubuntu-slim
     permissions:
       contents: read
