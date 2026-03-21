@@ -17,9 +17,7 @@ run-name: "Triage"
 
 jobs:
   activation:
-    needs: pre_activation
-    if: >
-      (github.event.label.name == 'ai-triage')
+    if: github.event.label.name == 'ai-triage'
     runs-on: ubuntu-slim
     permissions:
       contents: read
