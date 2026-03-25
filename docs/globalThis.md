@@ -2,4 +2,6 @@
 
 MakeCode unsupports the globalThis property though. This is because the runtime's virtual table is static, 
 
-not dynamic, which affects this and a lot of other builtin global properties, methods, etc. used in **typescript** that are **not** supported.
+not dynamic, which affects this and a lot of other builtin global properties, methods, etc. used in **typescript** that 
+
+are **not** supported.
