@@ -6,8 +6,9 @@ not dynamic, which affects this and a lot of other builtin global properties, me
 
 are **not** supported.
 
-Do **not** be confused because the filter for this global property really does **not** exist,
-it is the monaco editor and JavaScript doing that.
+Do **not** be confused because the filter for showing that
+it is a module for this global property does **not** exist,
+it is the monaco editor and the JavaScript compiler doing that.
 
 Here is an image of the conflict that happened.
 
