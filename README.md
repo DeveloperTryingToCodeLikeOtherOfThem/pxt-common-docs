@@ -69,3 +69,5 @@ You will be a contributor if you did write a pull request by yourself and is app
 
 **If you feel this repository's triage is limited, file an issue on a specific PXT target.
 For instance, you have to still make sure the topic is on topic and nothing off topic related things.**
+
+**I recommend you write issues here if the MakeCode Team is super busy.**
