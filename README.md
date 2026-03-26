@@ -76,3 +76,7 @@ For instance, you have to still make sure the topic is on topic and nothing off 
 are really recommended to really file issues in the PXT repositories are bugs in the runtime
 and someone in the team must fix the issue, like otherwise, write issues here.**
 
+## Repository documentation level
+This repository has a level documentation for when it is recommended to be used.
+If this is your first time understanding TypeScript, read MakeCode's documentation 
+guide. This repository is for hardware and low level functions, not for using game engines.
