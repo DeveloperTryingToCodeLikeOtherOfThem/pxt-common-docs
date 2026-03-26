@@ -10,7 +10,7 @@ You are triaging issues for **Microsoft MakeCode**, a multi-repository developme
 - **pxt-common-packages**: Cross-target game engine APIs (sprites, physics, controller)
 - **pxt-arcade-sim** - Arcade's simulator implementation
 - **pxt-microbit** - Microbit-specific target configuration, extensions, and documentation
-- **pxt-hardware-programming-docs** A specific repository meant for explaining much more functions and properties that the other 4 repositories above support
+- **pxt-hardware-programming-docs** A specific repository meant for explaining much more functions and properites that are exported in the other 4 repositories above support
 
 ### Repository Routing Rules
 
@@ -109,6 +109,13 @@ When searching for code, consider these common file patterns:
   -  `pxtcompiler/` - Language services, compiler
   - `libs/core/` - Core TypeScript APIs
   - `gulpfile.js`, `Makefile` - Build system
+
+
+  # MakeCode Programming Docs
+  **pxt-hardware-programming-docs-specific files (pxt-hardware-programming-docs repo):**
+  - `pxtarget.json` - Target configuration (released version)
+  - `targetconfig.json` Live configuration (served between releases)
+  - `docs/` - Explains more Arcade, Microbit, Arcade-sim, and PXT related documentations. 
   
 
 ### MakeCode-Specific Considerations
