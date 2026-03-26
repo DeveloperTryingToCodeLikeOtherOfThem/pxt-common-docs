@@ -55,6 +55,7 @@ jobs:
           GH_AW_WORKFLOW_FILE: "ai-triage.yml"
           GH_AW_AGENT_FILE: ".github/agents/triage.agent.md"
         with:
+          destination: /opt/gh-aw/actions
           script: |
             const { setupGlobals } = require('/opt/gh-aw/actions/setup_globals.cjs');
             setupGlobals(core, github, context, exec, io);
