@@ -61,3 +61,7 @@ Thanks to the MakeCode Team that made the web editor.
 
 **You can find a blog about this here.** [pxt-hardware-programming-docs-issue-request](https://askkesny.blogspot.com/?page=en-git-developertryingtocodelikeotherofthem-pxt-hardware-programming-docs-1772682036803)
 
+**Please be patient because I am the only collabrator plus contributor for now doing this work,
+if you feel there needs improvements, please write issues. Also, if you think you can fix the bug by your own,
+make a pull request and I will approve the checks if it is appropriate and not incorrect information.
+You will be a contributor if you did these rules.**
