@@ -29,7 +29,7 @@ Big Endian stores the most significant byte at the lowest address, it is meant f
     
  
 
-* The Buffer.create(size: number) method stores bytes in a fixed size.   
+* The Buffer.create(size: number) method stores bytes in a fixed size of memory.   
 
 * The Buffer.setNumber(format: NumberFormat, offset: number, value: number) method writes a number in a specified format in the buffer 
 
