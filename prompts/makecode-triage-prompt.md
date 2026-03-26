@@ -10,6 +10,7 @@ You are triaging issues for **Microsoft MakeCode**, a multi-repository developme
 - **pxt-common-packages**: Cross-target game engine APIs (sprites, physics, controller)
 - **pxt-arcade-sim** - Arcade's simulator implementation
 - **pxt-microbit** - Microbit-specific target configuration, extensions, and documentation
+- **pxt-microbit-sim** - Microbit's simulator implementation
 - **pxt-hardware-programming-docs** A specific repository meant for explaining much more functions and properites that are exported in the other 4 repositories above support
 
 ### Repository Routing Rules
