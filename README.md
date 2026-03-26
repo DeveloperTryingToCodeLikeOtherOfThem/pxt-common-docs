@@ -2,13 +2,14 @@
 
 for PXT/arcade
 
-This repository can be added as an **extension** in MakeCode Arcade.
+This repository can be added as an **extension** in MakeCode.
 
 1. open https://arcade.makecode.com/
 2. click on New Project
 3. click on Extensions under the gearwheel menu
 4. search for **https://github.com/developertryingtocodelikeotherofthem/pxt-hardware-programming-docs** and import
-
+**Warning**, this is unsupported and should **NOT** be imported because it is a real pacakge.
+ 
 This repository is meant for explaining how to code the engine in Microsoft MakeCode Arcade. This package does **NOT** connect to MakeCode's offical runtime docs, it is for local and to access the docs, you view the documentation here. 
 
 This can work properly by clicking the doc and seeing any of the .md files or go to your local MakeCode website and searching for this teaching extension and then view the files in the bottom of the explorer tab which you will see it say this extensions title, and then finding the md file by clicking the dropdown menu in the right of the title and the release (the number in the right of the title which has 2 decimals between all 3 digits). You would also see a trash can between both, please do not click it because it would permantly delete the extension in your editor to access. 
