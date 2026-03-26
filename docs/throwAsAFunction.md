@@ -6,8 +6,6 @@ Here is the shim for getting this function.
 
 `//% shim=pxt::throwValue` 
 
-You could think of it as you are driving into a secret place. 🚙
-
 Comments from the MakeCode Team.
 ``` ts
 // this is equivalent to JS `throw v`; it will leave
