@@ -62,6 +62,8 @@ Thanks to the MakeCode Team that made the web editor.
 
 **You can find a blog about this here.** [pxt-hardware-programming-docs-issue-request](https://askkesny.blogspot.com/?page=en-git-developertryingtocodelikeotherofthem-pxt-hardware-programming-docs-1772682036803)
 
+
+## Patience for this repository
 **Please be patient because I am the only collaborator plus contributor for now doing this work.
 If you feel there needs improvements in the documentations, please write the issue. Also, if you think you can fix the bug by your own,
 make a pull request and I will approve the checks if it is appropriate and not incorrect information.
@@ -73,3 +75,4 @@ For instance, you have to still make sure the topic is on topic and nothing off 
 **I recommend you write issues here if the MakeCode Team is super busy. The only issues
 are really recommended to really file issues in the PXT repositories are bugs in the runtime
 and someone in the team must fix the issue, like otherwise, write issues here.**
+
