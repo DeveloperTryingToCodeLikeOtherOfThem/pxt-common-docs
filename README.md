@@ -65,3 +65,6 @@ Thanks to the MakeCode Team that made the web editor.
 If you feel there needs improvements in the documentations, please write the issue. Also, if you think you can fix the bug by your own,
 make a pull request and I will approve the checks if it is appropriate and not incorrect information.
 You will be a contributor if you did write a pull request by yourself and is approved.**
+
+**If you feel this repository's triage is limited, file an issue on a specific PXT target.
+For instance, you have to still make sure the topic is on topic and nothing off topic related things.**
