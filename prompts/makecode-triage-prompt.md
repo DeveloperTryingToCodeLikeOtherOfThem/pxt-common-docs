@@ -93,7 +93,21 @@ When searching for code, consider these common file patterns:
 - `libs/screen/` - Display APIs
 - `sim/` - Shared simulator
 
-  # Microbit
+  # MakeCode Microbit
+
+  **Microbit-specific files (pxt-microbit repo):**
+  - `pxtarget.json` - Target configuration (released version)
+  - `targetconfig.json` Live configuration (served between releases)
+  - `libs/*/` - Microbit-specific library extensions
+  - `docs/` - Microbit documentation
+  - `editor/` - Editor customization
+  - `theme/` - Microbit themes
+
+  **Core framwork files (pxt repo):**
+  - `webapp/`, `pxteditor/` - Web app and editor
+  -  `pxtcompiler/` - Language services, compiler
+  - `libs/core/` - Core TypeScript APIs
+  - `gulpfile.js`, `Makefile` - Build system
   
 
 ### MakeCode-Specific Considerations
