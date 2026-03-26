@@ -1,6 +1,6 @@
 ## What is this repository about
 
-for PXT/arcade
+for PXT
 
 This repository can be added as an **extension** in MakeCode.
 
