@@ -117,18 +117,4 @@ jobs:
               repo: context.repo.repo,
               issue_number: context.issue.number,
               body: summary
-            });
-
-      - name: Add triaged label
-        uses: actions/github-script@v7
-        with:
-          script: |
-            // Add a label to mark this issue as triaged. If the label doesn't exist, this call will still succeed.
-            await github.rest.issues.addLabels({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: context.issue.number,
-              labels: ['triaged']
-            });
-
-  
+            });  
