@@ -80,7 +80,7 @@ and someone in the team must fix the issue, like otherwise, write issues here.**
 This repository has a level documentation for when it is recommended to be used.
 If this is your first time understanding TypeScript, read MakeCode's documentation 
 guide. This repository is for hardware and low level functions, not for using game engines.
-**Please know that filing issues is fine for every age, it is just the docummentations.
+**Please know that filing issues is permitted for every age, it is just the docummentations.
 You have permission to write issues, even if they are simple. But only the documentations
 are advanced. Asking questions can be anything related to confusion about how to diagnose 
 bugs and build an engine.**
