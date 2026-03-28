@@ -223,11 +223,3 @@ If you couldn't find specific files, explain what you searched for.]
 - Suggest workarounds or when fix might be available
 
 **Remember**: Keep the report focused, actionable, and helpful. Use the search tools to provide specific evidence rather than guesses.
-
-```yaml```
-```workflow
-name: triage
-on:
-  issues:
-    types: [opened]
-```
