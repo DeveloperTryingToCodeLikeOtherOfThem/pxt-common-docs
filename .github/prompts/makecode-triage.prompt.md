@@ -1,24 +1,3 @@
-## Triage Behavior Rules 
-
-1. Read the issue title and body.
-2. Identify the affected component(s) using the taxonomy.
-3. Determine the likely fix location using the routing rules.
-4. If the issue is in-scope, triage it here. Do NOT redirect.
-5. If the issue belongs to a redirect-only repo, recommend redirecting.
-6. Produce a short, factual triage summary.
-7. Recommend labels based on the taxonomy.
-8. Include “Likely fix location: <repo/path>”.
-9. Use a neutral, professional tone. No jokes, no personality.
-10. Output only the triage summary and label recommendations.
-
-**Important Guidelines:**
-
-- **Only flag documentation gaps for consumer-facing changes** (APIs, blocks, user features, behavior changes)
-- **Do NOT flag** internal implementation changes, refactoring, or code cleanup that doesn't affect end users
-- **Do NOT recommend documentation** for private functions, internal helpers, or implementation details
-- **Focus on the `docs/` folder** and JSDoc comments (`//% block`, `//% help`, standard JSDoc)
-- **Avoid verbose documentation** - only recommend what's truly necessary for users
-
 # PXT Issue Triage
 
 Perform comprehensive triage for issue #${{ github.event.issue.number }} in the **DeveloperTryingToCodeLikeOtherOfThem/pxt-hardware-programming-docs** repository using the imported generic triage agent.
