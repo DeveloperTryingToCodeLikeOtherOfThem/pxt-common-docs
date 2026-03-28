@@ -2,14 +2,10 @@
 
 The `control.programHash()` function is used to **retrieve a hash of the currently running program**. This hash is generated at compile time by the MakeCode compiler and is embedded in the binary as a static value.
 
-### What Does It Do?
-
 When you call `control.programHash()` in your TypeScript code, the runtime returns the program's hash that was computed during the build process. This hash value is unique to your program and can be used for identification, telemetry, versioning, caching, or classroom scenarios where you need to distinguish between different program builds.
 
-### How It Works
-
-The implementation follows a shim pattern where the TypeScript function bridges to the underlying C++ runtime:
-
+## Implementation
+Here is the implementation of how it is implemented.
 **TypeScript (control.ts):**
 ``` ts
 //% blockId=control_program_hash weight=80 block="program hash"
@@ -20,7 +16,7 @@ export function programHash(): number {
 }//% shim=control.programHash
 ```
 
-**C++ (pxt.cpp or control.cpp):**
+**C++ (pxt.cpp):**
 The C++ implementation fetches a pre-computed hash value that was embedded during compilation:
 ``` cpp
 namespace control {
