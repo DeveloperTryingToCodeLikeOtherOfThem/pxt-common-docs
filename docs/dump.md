@@ -1,7 +1,8 @@
 ## Dump
 
-A dump means when a program spits out raw information so you inspect it.
-For example, dumps include memory dumping, stack dumping, variable dumping, debug dumping, 
+Spits out raw information so you inspect it.
+
+Dumps include memory dumping, stack dumping, variable dumping, debug dumping, 
 DMESG dumping, and more.
 
 ## Example
