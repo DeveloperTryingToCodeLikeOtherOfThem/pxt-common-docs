@@ -8,4 +8,11 @@
   },
   "license": "MIT",
   "homepage": "https://github.com/DeveloperTryingToCodeLikeOtherOfThem/pxt-hardware-programming-docs#readme",
+  "scripts": {
+    "build": "gulp",
+    "update": "gulp update",
+    "prepare": "node ./scripts/npm-prepare.js",
+    "compile-aw": "gh aw compile --strict"
+  }
+
 }
