@@ -98,6 +98,8 @@
 #           CHROME_BIN: chromium-browser
 #           DISPLAY: :99.0
 #           CI: true
+
+
 name: pxt-buildpush
 
 on:
@@ -148,14 +150,6 @@ jobs:
           sudo npm install -g pxt
           npm install
 
-      - name: pxt ci (without publish capability)
-        run: |
-          pxt ci
-        env:
-          CHROME_BIN: chromium-browser
-          DISPLAY: :99.0
-          CI: true
-
   buildvtag:
     name: buildvtag
     runs-on: ubuntu-latest
@@ -180,12 +174,3 @@ jobs:
           sudo apt-get install xvfb
           sudo npm install -g pxt
           npm install
-
-      - name: pxt ci (with publish capability)
-        run: |
-          pxt ci --publish
-        env:
-          NPM_PUBLISH: true
-          CHROME_BIN: chromium-browser
-          DISPLAY: :99.0
-          CI: true
