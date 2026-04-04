@@ -6,7 +6,7 @@ of code and the commit of the specified function.
 
 Here is an example of what blaming looks like.
  <img width="1326" height="402" alt="image" src="https://github.com/user-attachments/assets/5e8fa557-4d95-4cfa-88c2-5d285243722e" />
-**The thing that is right of user profiles are the text (the commit).**
+**The object that is right of user profiles are the text (the commit).**
 
 **Not** every blame might have important info about the 
 specific line of code, it could sometimes be written as "Create"
