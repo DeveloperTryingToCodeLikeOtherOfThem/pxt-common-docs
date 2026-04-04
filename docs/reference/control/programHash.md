@@ -1,6 +1,6 @@
-## control.programHash
+## programHash
 
-The `control.programHash()` function is used to **retrieve a hash of the currently running program**. This hash is generated at compile time by the MakeCode compiler and is embedded in the binary as a static value.
+ Retrieve a hash of the currently running program. This hash is generated at compile time by the MakeCode compiler and is embedded in the binary as a static value.
 
 When you call `control.programHash()` in your TypeScript code, the runtime returns the program's hash that was computed during the build process. This hash value is unique to your program and can be used for identification, telemetry, versioning, caching, or classroom scenarios where you need to distinguish between different program builds.
 
