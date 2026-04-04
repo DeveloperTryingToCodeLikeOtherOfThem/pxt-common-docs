@@ -1,3 +1,5 @@
+## Throw function
+
 If you did not know, there is a function in the runtime layer called **throwValue**.
 This function behaves the same way as the throw syntax, it is just a other way for using the
 function.
