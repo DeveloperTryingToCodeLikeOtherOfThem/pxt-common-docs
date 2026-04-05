@@ -9,7 +9,7 @@ This repository can be added as an **extension** in MakeCode.
 3. click on Extensions under the gearwheel menu
 4. search for **https://github.com/developertryingtocodelikeotherofthem/pxt-hardware-programming-docs** and import
 
-**Warning**, this is unsupported and should **NOT** be imported because it is a real pacakge.
+**Warning**, this is unsupported and should **NOT** be imported because it is a real package.
  
 This repository is meant for explaining how to code the engine in Microsoft MakeCode Arcade. This package does **NOT** connect to MakeCode's offical runtime docs, it is for local and to access the docs, you view the documentation here. 
 
