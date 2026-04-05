@@ -17,8 +17,6 @@ This repository is meant for explaining how to code the engine in Microsoft Make
 This extension **does not** work in any MakeCode editor because of the issues that were encountered in pxt.json. 
 Because of that, you have to review everything here instead. Also, tags and releases will still be updated, so do **not** worry about that. If you have any questions about this repository, please click on this link here. [Issues: Click Here](https://github.com/DeveloperTryingToCodeLikeOtherOfThem/pxt-hardware-programming-docs/issues). Please do **not** worry if you have questions because it is part of this repository too.
 
-Thanks to the MakeCode Team that made the web editor.
-
 **You may wish to find a blog about this here.** [pxt-hardware-programming-docs-issue-request](https://askkesny.blogspot.com/?page=en-git-developertryingtocodelikeotherofthem-pxt-hardware-programming-docs-1772682036803)
 
 
