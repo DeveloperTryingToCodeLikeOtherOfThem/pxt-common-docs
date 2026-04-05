@@ -11,7 +11,7 @@ This repository can be added as an **extension** in MakeCode.
 
 **Warning**, this is unsupported and should **NOT** be imported because it is a real package.
  
-This repository is meant for explaining how to code the engine in Microsoft MakeCode Arcade. This package does **NOT** connect to MakeCode's offical runtime docs, it is for local and to access the docs, you view the documentation here. 
+This repository is meant for explaining how to code the engine in Microsoft MakeCode. This package does **NOT** connect to MakeCode's offical runtime docs, it is for local and to access the docs, you view the documentation here. 
 
 ## Support
 This extension **does not** work in any MakeCode editor because of the issues that were encountered in pxt.json. 
