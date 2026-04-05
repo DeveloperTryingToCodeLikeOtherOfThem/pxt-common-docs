@@ -7,14 +7,14 @@
 Forces the garbage collector and [dump](https://github.com/DeveloperTryingToCodeLikeOtherOfThem/pxt-hardware-programming-docs/master/docs/dump.md) basic information about the heap.
 
 ## Example
-Let us say you want to collect information about the heap when the score is 100.
+Let us say you want to collect information about the heap when `seconds` equal 100.
 ``` ts
-   let score = 0;
+   let seconds = 0;
    info.setScore(score);
 
-   game.onUpdate(() => {
-     if (score === 100) {
+    control.registerFrameHandler(20, () => {
+        if (seconds == 100) {
         control.gc();
-     }
-   })
+        } 
+    })
 ```
