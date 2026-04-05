@@ -5,5 +5,14 @@
   </head>
   <body>
    <p>Welcome to pxt-hardware-programming-docs.</p>
+    <div id="content"></div>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+fetch("README.md")
+  .then(r => r.text())
+  .then(md => {
+    document.getElementById("content").innerHTML = marked.parse(md);
+  });
+</script>
   </body>
 </html>
