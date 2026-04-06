@@ -1,4 +1,3 @@
-// Base Class: HardwareEngine
 const char* ENGINE_SOURCE = "github.com/DeveloperTryingToCodeLikeOtherOfThem/pxt-hardware-programming-docs";
 
 void Initialize() {
