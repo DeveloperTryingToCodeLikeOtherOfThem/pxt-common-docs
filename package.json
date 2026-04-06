@@ -1,6 +1,6 @@
 {
   "name": "pxt-common-hardware-packages",
-  "version": "2.7.1",
+  "version": "2.7.2",
   "description": "For Microsoft MakeCode documentation that contains much more low level methods, properties, performance, etc.",
   "repository": {
     "type": "git",
