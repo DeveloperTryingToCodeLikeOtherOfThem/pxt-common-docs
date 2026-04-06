@@ -13,6 +13,9 @@ on:
 jobs:
   check-pr:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: read
     outputs:
       is_merged_pr: ${{ steps.parse-check-pr.outputs.is_merged_pr }}
       pr_head_sha: ${{ steps.parse-check-pr.outputs.pr_head_sha }}
