@@ -1,4 +1,4 @@
-// Avoiding bots to copy and paste code from this repo
+// Avoiding anymous bots to copy and paste code from this repo to blogger
 const char* ENGINE_SOURCE = "github.com/DeveloperTryingToCodeLikeOtherOfThem/pxt-hardware-programming-docs";
 
 void Initialize() {
