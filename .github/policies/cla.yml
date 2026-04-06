@@ -1,0 +1,31 @@
+# adapted from https://github.com/aspnetboilerplate/.github/blob/main/policies/cla.yml#L18
+name: Contributor License Agreement Policy
+description: .NET Foundation CLA policy file
+
+resource: repository
+  
+configuration: 
+   cla:
+      content: https://raw.githubusercontent.com/dotnet-foundation/.github/main/CLA/dotnetfoundation.yml
+      minimalChangeRequired: 
+         files: 1
+         codeLines: 1
+         # For protection on this repository
+      bypassUsers:
+         - dependabot[bot]
+         - greenkeeper[bot]
+         - openapi-sdkautomation[bot]
+         - github-actions[bot]
+         - content-assistant[bot]
+         - microsoft-github-policy-service[bot]
+         - msftbot[bot]
+         - prmerger-test[bot]
+         - learn-build-service-test[bot]
+         - learn-build-service-ppe[bot]
+         - learn-build-service-prod[bot]
+         - typescript-bot
+         - MicrosoftIssueBot
+         - MixedRealitySpectatorViewBot
+         - microsoft-golang-bot
+         - RunTheBot
+      autoSignMsftEmployee: true
