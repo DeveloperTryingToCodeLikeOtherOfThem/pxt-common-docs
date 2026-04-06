@@ -4,7 +4,7 @@ for PXT
 
 This repository can be added as an **extension** in MakeCode.
 
-1. open https://arcade.makecode.com/ or https://makecode.microbit.org
+1. open https://arcade.makecode.com/ or https://makecode.microbit.org/
 2. click on New Project
 3. click on Extensions under the gearwheel menu
 4. search for **https://github.com/developertryingtocodelikeotherofthem/pxt-hardware-programming-docs** and import
