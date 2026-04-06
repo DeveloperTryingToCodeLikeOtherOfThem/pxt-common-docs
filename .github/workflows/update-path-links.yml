@@ -1,0 +1,41 @@
+name: Fix doc links on moved files
+
+on:
+  push:
+    paths:
+      - "docs/**"
+      - "**.md"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix-links:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout full history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Make script executable
+        run: chmod +x .github/scripts/update-old-path-file-links.sh
+
+      - name: Run doc link updater
+        run: .github/scripts/update-old-path-file-links.sh
+
+      - name: Commit changes
+        run: |
+          git config user.name "docs-link-bot"
+          git config user.email "docs-link-bot@users.noreply.github.com"
+
+          git add .
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          git commit -m "Fix doc links for moved files"
+          git push
