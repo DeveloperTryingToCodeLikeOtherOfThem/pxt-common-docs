@@ -10,7 +10,7 @@ configuration:
       minimalChangeRequired: 
          files: 1
          codeLines: 1
-         # For protection on this repository
+         # For protection on this repository which users can and cannot have the minimal changes required
       bypassUsers:
          - dependabot[bot]
          - greenkeeper[bot]
