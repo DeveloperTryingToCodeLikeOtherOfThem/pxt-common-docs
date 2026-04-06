@@ -31,4 +31,4 @@ are advanced. Asking questions can be anything related to confusion about how to
 bugs and build an engine.**
 
 ## Safety Precautions
-If you followed a link here from a 'Best Answer' site copying an issue me or another bot has wrote, you have been redirected from a scraper bot. That site is not authorized
+If you ever followed a link here from a 'Best Answer' site copying an issue me or another bot has wrote, you have been redirected from a scraper bot. That site is not authorized
