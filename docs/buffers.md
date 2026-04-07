@@ -47,6 +47,9 @@ Big Endian stores the most significant byte at the lowest address, it is meant f
 
 * The Buffer.isReadOnly() method reads if the buffer cannot be modified, otherwise it returns false
 
+ * The Buffer.hash(bits: int32) method computes a k-bit non-cryptographic hash of the buffer using 
+  the FNV-1 algorithm. 
+
 * The Buffer.length property returns the total area of the buffer
 
 ## See Also
