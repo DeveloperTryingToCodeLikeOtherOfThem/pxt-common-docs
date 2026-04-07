@@ -1,6 +1,6 @@
 ## Output of a function
 
-When you log a function in MakeCode using `console.log(f)`, you might expect to see something simple like:
+When you log a function using `console.log(f)`, you might expect to see something simple like:
 
 ```ts
 function f() { return 123 }
@@ -25,5 +25,4 @@ function f__P19063(s) {
 }
 ```
 
-This looks strange if you’re expecting normal JavaScript. But this output is actually a window into how the PXT compiler and MakeCode virtual machine work under the hood.
-You should **never** play around this code, it is how MakeCode compiler reads your TypeScript, and runs it.
+This looks strange if you are expecting normal JavaScript. But this output is actually a window into how the PXT compiler and MakeCode virtual machine work.
