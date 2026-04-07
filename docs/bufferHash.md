@@ -22,3 +22,6 @@ Let us calculate the buffer's hash when the bits as 2 when the buffer's length i
        hashValue = buffer.hash(2);
     }
 ```
+
+## See also
+[Buffer](https://github.com/DeveloperTryingToCodeLikeOtherOfThem/pxt-hardware-programming-docs/blob/main/docs/buffers.md)
