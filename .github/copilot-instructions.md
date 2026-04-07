@@ -1,4 +1,4 @@
-# MakeCode Arcade Multi-Repository Workspace Instructions for GitHub Copilot
+# MakeCode Multi-Repository Workspace Instructions for GitHub Copilot
 
 ## Workspace Overview
 This is a **documentation repository** for the Microsoft MakeCode ecosystem. The workspace contains four linked repositories that work together to provide a completeTypeScript programming environment for creating engines.
