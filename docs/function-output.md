@@ -1,3 +1,5 @@
+## Output of a function
+
 When you log a function in MakeCode using `console.log(f)`, you might expect to see something simple like:
 
 ```ts
