@@ -66,6 +66,7 @@
     "docs/mixed-arrays.md",
     "docs/buffers_vs_arrays.md",
     "docs/throwFunction.md",
+    "docs/install/pxtCPPbuild.md",
     "docs/analyzing_code.md",
     "docs/auto-fill-sample.md",
     "docs/popScene.md",
