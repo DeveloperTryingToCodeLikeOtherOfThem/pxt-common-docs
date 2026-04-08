@@ -33,4 +33,5 @@ bugs and build an engine.**
 
 ## Safety Precautions
 If you ever followed a link here from a 'Best Answer' site copying an issue of me or another bot has wrote, you have been redirected from a scraper bot. 
+
 <img width="703" height="127" alt="image" src="https://github.com/user-attachments/assets/36cf399e-3b53-40dd-9999-b141b548e815" />
