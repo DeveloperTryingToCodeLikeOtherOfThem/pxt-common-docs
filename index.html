@@ -20,6 +20,7 @@ fetch("README.md")
   .then(md => {
     document.getElementById("content").innerHTML = marked.parse(md);
   });
+  generateProfile();
 </script> 
   </body>
 </html>
