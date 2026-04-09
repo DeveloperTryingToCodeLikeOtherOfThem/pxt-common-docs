@@ -21,7 +21,7 @@ fetch("README.md")
     document.getElementById("content").innerHTML = marked.parse(md);
   });
 
-fetch("scripts/user.js")
+fetch("https://raw.githubusercontent.com/DeveloperTryingToCodeLikeOtherOfThem/pxt-hardware-programming-docs/master/docs/static/userProfile.png")
   .then(r => r.text())
   .then(code => {
     document.getElementById("content").textContent = code;
