@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-
+ 
 const DOCS_DIR = path.join(__dirname, "..", "docs");
 const OUTPUT_FILE = path.join(__dirname, "..", "docs-index.html");
 
