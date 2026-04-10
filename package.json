@@ -93,5 +93,7 @@
     "docs/buffers.md",
     "docs/unary.md",
     "docs/dump.md"
-  ]
+  ],
+   "dependencies": {
+    "@github/copilot": "^1.0.11",
 }
