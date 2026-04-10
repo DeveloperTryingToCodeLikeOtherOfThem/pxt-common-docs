@@ -9,7 +9,7 @@ const RAW_BASE =
 
 function generate() { 
   const files = fs.readdirSync(DOCS_DIR)
-    .filter(f => f.endsWith(".md"));
+    .filter(f => f.endsWith(".md")); 
 
   const links = files.map(f => {
     return `<li><a href="${RAW_BASE}${f}" target="_blank">${f}</a></li>`;
