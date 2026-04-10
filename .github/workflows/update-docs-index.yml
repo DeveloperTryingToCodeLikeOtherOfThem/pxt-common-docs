@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - "docs/**"
-      - "scripts/generateDocsIndex.js"
+      - "scripts/generate-docs-index.js"
 
 jobs:
   update-index:
