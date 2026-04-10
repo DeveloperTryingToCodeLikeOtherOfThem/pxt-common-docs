@@ -42,6 +42,7 @@
     "docs/fixed_point.md",
     "docs/how-to-download-files-in-makecode.md",
     "docs/bytes.md",
+    "docs/panic.md",
     "docs/auto-fill-sample.md",
     "docs/internal_properties.md",
     "docs/statementsVsExpressions.md",
