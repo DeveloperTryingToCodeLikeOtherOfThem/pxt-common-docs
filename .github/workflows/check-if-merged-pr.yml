@@ -22,7 +22,7 @@ jobs:
     steps:
       - name: Check if this commit is from a merged PR
         id: check-pr
-        uses: actions/github-script@v8
+        uses: actions/github-script@v9.0.0
         with:
           result-encoding: string
           script: |
