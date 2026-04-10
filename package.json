@@ -74,6 +74,7 @@
     "docs/function-output.md",
     "docs/history-of-bytes.md",
     "docs/exportModifier.md",
+    "docs/references/core/pxtbase.h.md",
     "docs/implOfSceneStacks.md",
     "docs/underscore_public_properties_and_methods.md",
     "docs/using-the-right-memory-byte-unit.md",
