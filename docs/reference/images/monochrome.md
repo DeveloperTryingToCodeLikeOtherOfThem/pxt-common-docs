@@ -1,5 +1,5 @@
 ## isMono
-a single color (hue) used in an image or display, where all pixels are variations of that hue. If the image is black and white, it is true. Otherwise, it is false.
+an image that **must** contain exactly **one** color.
 ``` sig
   image.create(null, null).isMono
 ```
