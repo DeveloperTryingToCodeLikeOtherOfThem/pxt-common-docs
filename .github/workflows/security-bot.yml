@@ -17,18 +17,18 @@ jobs:
       - name: Copilot Forensic Scan
         id: scanner
         env:
-          COPILOT_GITHUB_TOKEN: ${{ secrets.COPILOT_TOKEN }}
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # In 2026, the CLI prioritizes GH_TOKEN for authentication
+          GH_TOKEN: ${{ secrets.COPILOT_TOKEN }}
         run: |
           TARGET="https://enablesmartspirit.blogspot.com/"
           
-          # 2026 Automation Syntax:
-          # 1. 'copilot task' is the dedicated agent for checking sites/code.
-          # 2. --allow-all handles permissions and silences unnecessary logs.
-          # 3. We wrap the result in a clean variable.
+          # The -p flag must come FIRST.
+          # We use --allow-all-tools to give the AI permission to visit the URL.
+          # The output is captured directly into the variable.
           
-          REPORT=$(copilot task "Check if $TARGET exists. If it does, find the 'AGC CSR' version. If it is a 404, respond ONLY with '404'." --allow-all)
+          REPORT=$(copilot -p "Check if $TARGET exists. If it does, find the 'AGC CSR' version. If it is a 404, respond ONLY with '404'." --allow-all-tools)
           
+          # Use HEREDOC to handle multi-line AI responses safely
           echo "REPORT_DATA<<EOF" >> $GITHUB_ENV
           echo "$REPORT" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
