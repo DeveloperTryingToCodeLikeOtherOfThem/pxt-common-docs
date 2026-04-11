@@ -22,13 +22,14 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # We tell Copilot to inspect the site and output a summary
           TARGET="https://enablesmartspirit.blogspot.com/"
           
-          # Copilot 'read' command analyzes the URL context safely
-          REPORT=$(copilot explain "Analyze $TARGET. Is the 'AGC CSR' script present? What is the version? Respond only with the data or '404' if dead.")
+          # We add the -p flag so it runs automatically without waiting for you
+          REPORT=$(gh copilot explain -p "Analyze $TARGET. Is the 'AGC CSR' script present? What is the version? Respond only with the data or '404' if dead.")
           
-          echo "REPORT_DATA=$REPORT" >> $GITHUB_ENV
+          echo "REPORT_DATA<<EOF" >> $GITHUB_ENV
+          echo "$REPORT" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
 
       - name: Log Findings to Private Issue
         env:
