@@ -9,20 +9,33 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       issues: write
+      contents: read
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+
+      - name: Ensure Labels Exist
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: "DeveloperTryingToCodeLikeOtherOfThem/workflow-testing"
+        run: |
+          # 2026 FIX: Force-create the labels so the 'gh issue' command doesn't crash
+          gh label create "neutralized" --color "0E8A16" --description "Target is 404/Offline" --repo "$REPO" --force || true
+          gh label create "threat-detected" --color "D93F0B" --description "Malicious script found" --repo "$REPO" --force || true
+          gh label create "monitored" --color "FBCA04" --description "Site is up but clean" --repo "$REPO" --force || true
 
       - name: Forensic Web Grab
         id: grab
         run: |
           TARGET="https://enablesmartspirit.blogspot.com/"
-          # Grab the site content. -f fails on 404, -L follows redirects.
-          curl -s -L -f "$TARGET" > site_source.txt || echo "OFFLINE" > site_source.txt
+          # Use curl -f to fail on 404/500 errors. 
+          # Use -A to set a User-Agent so the Blogger bots don't block the runner.
+          curl -s -L -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" "$TARGET" > site_source.txt || echo "OFFLINE" > site_source.txt
           
+          # Detect the Hacker's AGC CSR script signatures
           if grep -q "OFFLINE" site_source.txt; then
             echo "RESULT=404" >> $GITHUB_ENV
-          elif grep -q "AGC CSR" site_source.txt; then
+          elif grep -q -E "AGC CSR|agc-csr|notice-detected" site_source.txt; then
             echo "RESULT=DETECTED" >> $GITHUB_ENV
           else
             echo "RESULT=CLEAN" >> $GITHUB_ENV
@@ -30,22 +43,22 @@ jobs:
 
       - name: Log Findings
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO: "DeveloperTryingToCodeLikeOtherOfThem/workflow-testing"
         run: |
           if [[ "$RESULT" == "404" ]]; then
             gh issue create --repo "$REPO" \
               --title "🎉 Node Neutralized" \
-              --body "The site is officially 404 or Offline. No AI quota used." \
+              --body "Target site is 404 or Offline. The hacker node has been dropped." \
               --label "neutralized"
           elif [[ "$RESULT" == "DETECTED" ]]; then
             gh issue create --repo "$REPO" \
               --title "⚠️ Warning: AGC CSR Detected" \
-              --body "The malicious script was found in the source code of $TARGET." \
+              --body "THE MALICIOUS SCRIPT IS LIVE. Signatures for 'AGC CSR' found in site source." \
               --label "threat-detected"
           else
             gh issue create --repo "$REPO" \
               --title "🔍 Scan Clean" \
-              --body "Site is up, but 'AGC CSR' was not found in this scan." \
+              --body "The site is reachable, but the specific 'AGC CSR' spam signatures were not found." \
               --label "monitored"
           fi
