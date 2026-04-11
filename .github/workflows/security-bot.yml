@@ -24,9 +24,10 @@ jobs:
         run: |
           TARGET="https://enablesmartspirit.blogspot.com/"
           
-          # We add the -p flag so it runs automatically without waiting for you
-          REPORT=$(gh copilot explain -p "Analyze $TARGET. Is the 'AGC CSR' script present? What is the version? Respond only with the data or '404' if dead.")
+          # Use the --prompt flag (or -p) correctly at the end of the command
+          REPORT=$(gh copilot explain "Analyze the source code of $TARGET for 'AGC CSR' scripts" --prompt)
           
+          # Save the report for the next step
           echo "REPORT_DATA<<EOF" >> $GITHUB_ENV
           echo "$REPORT" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
