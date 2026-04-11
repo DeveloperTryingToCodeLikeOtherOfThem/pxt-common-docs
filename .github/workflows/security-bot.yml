@@ -24,14 +24,16 @@ jobs:
         run: |
           TARGET="https://enablesmartspirit.blogspot.com/"
           
-          # Use the --prompt flag (or -p) correctly at the end of the command
-          REPORT=$(gh copilot explain "Analyze the source code of $TARGET for 'AGC CSR' scripts" --prompt)
+          # FIX: The -p flag must come before the quoted prompt text.
+          # We use 'copilot' directly to avoid the 'gh' wrapper issues.
+          REPORT=$(copilot -p "Analyze the source code of $TARGET. Is the 'AGC CSR' script present? What is the version? Respond only with the data or '404' if dead.")
           
-          # Save the report for the next step
+          # Save the report for the next step using the HEREDOC format
           echo "REPORT_DATA<<EOF" >> $GITHUB_ENV
           echo "$REPORT" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
 
+     
       - name: Log Findings to Private Issue
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
