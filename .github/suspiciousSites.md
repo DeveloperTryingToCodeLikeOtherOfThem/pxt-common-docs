@@ -1,4 +1,4 @@
-<img width="1272" height="217" alt="image" src="https://github.com/user-attachments/assets/6d2c73ea-5457-40bd-aef0-5414ace395f7" />
+<img width="907" height="68" alt="image" src="https://github.com/user-attachments/assets/65d9a9ac-067c-48df-adf9-ecfa8551205a" />
 
 ``` js
  document.addEventListener(&#39;DOMContentLoaded&#39;, function(event) {
