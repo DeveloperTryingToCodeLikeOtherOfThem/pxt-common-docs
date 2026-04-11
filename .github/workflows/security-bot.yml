@@ -20,15 +20,16 @@ jobs:
       - name: Copilot Forensic Scan
         id: scanner
         env:
+          # In 2026, COPILOT_GITHUB_TOKEN is the required variable for CLI Agents
+          COPILOT_GITHUB_TOKEN: ${{ secrets.COPILOT_TOKEN }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           TARGET="https://enablesmartspirit.blogspot.com/"
           
-          # FIX: The -p flag must come before the quoted prompt text.
-          # We use 'copilot' directly to avoid the 'gh' wrapper issues.
-          REPORT=$(copilot -p "Analyze the source code of $TARGET. Is the 'AGC CSR' script present? What is the version? Respond only with the data or '404' if dead.")
+          # Use -p for the prompt and --allow-all to bypass interactive tool approvals
+          # The -s flag makes the output "Silent" (no extra AI fluff, just the data)
+          REPORT=$(copilot -p "Analyze the source code of $TARGET. Is the 'AGC CSR' script present? What is the version? If the site is a 404, respond ONLY with 'DELETED'." --allow-all -s)
           
-          # Save the report for the next step using the HEREDOC format
           echo "REPORT_DATA<<EOF" >> $GITHUB_ENV
           echo "$REPORT" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
