@@ -9,39 +9,53 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       issues: write
+      contents: read
     steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
       - name: Install Copilot CLI
         run: npm install -g @github/copilot
 
       - name: Manual Source Grab
         id: grabber
         run: |
-          # Use curl to get the site source. If it's a 404, this will catch it.
           TARGET="https://enablesmartspirit.blogspot.com/"
+          # Grab the HTML manually to bypass the Free Tier 'Search Block'
           curl -s -L "$TARGET" > site_source.txt || echo "OFFLINE" > site_source.txt
           
-          # Check if the file is empty or 404
-          if [[ ! -s site_source.txt ]]; then echo "STATUS=404" >> $GITHUB_ENV; fi
+          # If file is tiny/empty, it's a 404. Blogspot 404s are usually < 1000 bytes.
+          if [ $(stat -c%s site_source.txt) -lt 1000 ]; then
+            echo "STATUS=404" >> $GITHUB_ENV
+          else
+            echo "STATUS=ACTIVE" >> $GITHUB_ENV
+          fi
 
       - name: Copilot Forensic Analysis
-        if: env.STATUS != '404'
+        if: env.STATUS == 'ACTIVE'
         env:
-          COPILOT_GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          COPILOT_GITHUB_TOKEN: ${{ secrets.COPILOT_TOKEN }}
         run: |
-          # We PIPE the text into copilot so it doesn't have to 'search'
-          # This uses 0 'Premium Requests' because it's local analysis
-          REPORT=$(cat site_source.txt | copilot -p "Look at this HTML code. Is the 'AGC CSR' script here? What version? Respond in 1 sentence.")
-          
+          # Analyze the text we already grabbed
+          REPORT=$(cat site_source.txt | copilot -p "Analyze this HTML. Is 'AGC CSR' present? What version? Respond in 1 short sentence." --yes)
           echo "REPORT_DATA<<EOF" >> $GITHUB_ENV
           echo "$REPORT" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
 
       - name: Log Findings
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          REPO: "DeveloperTryingToCodeLikeOtherOfThem/workflow-testing"
         run: |
           if [[ "$STATUS" == "404" ]]; then
-            gh issue create --title "🎉 Hooray: Node Neutralized" --body "Site is dead." --label "neutralized"
+            gh issue create --repo "$REPO" \
+              --title "🎉 Hooray: Node Neutralized" \
+              --body "The site enablesmartspirit.blogspot.com is dead. Investigation closed." \
+              --label "neutralized"
           else
-            gh issue create --title "⚠️ Warning: Node Active" --body "Analysis: $REPORT_DATA" --label "threat-detected"
+            gh issue create --repo "$REPO" \
+              --title "⚠️ Warning: Node Active" \
+              --body "### Forensic Report
+              **Analysis:** $REPORT_DATA" \
+              --label "threat-detected"
           fi
