@@ -36,7 +36,7 @@ jobs:
       - name: "Lock and Flag"
         if: env.MATCH_FOUND == 'true'
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
           ISSUE_URL: ${{ github.event.issue.html_url }}
           COMMENT_ID: ${{ github.event.comment.id }}
         run: |
@@ -50,7 +50,7 @@ jobs:
       - name: "Report to Watchdog"
         if: env.MATCH_FOUND == 'true'
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
           # Path to your private forensic repo
           WATCHDOG_REPO: "DeveloperTryingToCodeLikeOtherOfThem/workflow-testing"
         run: |
