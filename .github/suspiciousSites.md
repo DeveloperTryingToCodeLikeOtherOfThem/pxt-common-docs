@@ -65,4 +65,4 @@
 
 ```
 
-**If you ever encountered any website looks like this, exit out immediately.**
+**If you ever encountered any website have this structure, exit out immediately.**
