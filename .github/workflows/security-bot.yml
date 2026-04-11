@@ -44,7 +44,7 @@ jobs:
       - name: Log Findings
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          REPO: "DeveloperTryingToCodeLikeOtherOfThem/workflow-testing"
+          REPO: "DeveloperTryingToCodeLikeOtherOfThem/pxt-hardware-programming-docs"
         run: |
           if [[ "$RESULT" == "404" ]]; then
             gh issue create --repo "$REPO" \
