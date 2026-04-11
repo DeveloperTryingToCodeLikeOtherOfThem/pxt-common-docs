@@ -15,6 +15,33 @@
     </script>
 ```
 
+``` html
+    // templateQuestAnswer
+    let templateQuestAnswer = `<header class="main-header">
+        <nav class="navbar">
+            <div class="container">
+                <a href="/" class="brand">{{title-headers}}</a>
+                <div class="nav-right">
+                    <div class="search-container">
+                        <form class="search-form">
+                            <input type="text" class="search-input" placeholder="{{Cari artikel}}...">
+                            <button type="submit" class="search-btn" aria-label="{{Submit pencarian}}">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </form>
+                        <button class="search-toggle" aria-label="{{Toggle pencarian}}">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <button class="sidebar-toggle" aria-label="{{Toggle menu sidebar}}">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+```
+
 ``` js
  document.addEventListener(&#39;DOMContentLoaded&#39;, function(event) {
       window.cookieChoices &amp;&amp; cookieChoices.showCookieConsentBar &amp;&amp; cookieChoices.showCookieConsentBar(
