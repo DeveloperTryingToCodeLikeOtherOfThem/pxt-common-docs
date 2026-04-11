@@ -30,7 +30,7 @@ jobs:
 
       - name: Log Findings
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
           REPO: "DeveloperTryingToCodeLikeOtherOfThem/workflow-testing"
         run: |
           if [[ "$RESULT" == "404" ]]; then
