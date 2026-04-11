@@ -1,62 +1,55 @@
-name: "🛡️ Triage: Malicious Link Detector"
+name: "📡 Blogger Bot Tracker"
 
 on:
-  issue_comment:
-    types: [created]
-  issues:
-    types: [opened, edited]
+  schedule:
+    - cron: '0 * * * *' # Runs every hour, on the hour
+  workflow_dispatch:    # Allows you to click "Run" whenever you want
 
 jobs:
-  triage-links:
+  scrape-blogger:
     runs-on: ubuntu-latest
-    # Only run if the commenter is not you (to prevent self-flagging)
-    if: github.event.sender.login != 'DeveloperTryingToCodeLikeOtherOfThem'
     permissions:
       issues: write
-      contents: read
 
     steps:
-      - name: "Identify Malice"
-        id: check
-        env:
-          BODY: ${{ github.event.comment.body || github.event.issue.body }}
-          AUTHOR: ${{ github.event.sender.login }}
+      - name: "Forensic Fetch"
         run: |
-          # 1. Define the targets
-          LINK="enablesmartspirit.blogspot.com"
-          BOT_PATTERN="USER[0-9]{4}"
-          PHRASE="PLEASE LIKE ME"
+          TARGET="https://enablesmartspirit.blogspot.com/"
           
-          # 2. Search for signatures
-          if echo "$BODY" | grep -qE "$LINK|$BOT_PATTERN|$PHRASE"; then
-            echo "MATCH_FOUND=true" >> $GITHUB_ENV
-            echo "REASON=Malicious Link or Bot Signature detected from $AUTHOR" >> $GITHUB_ENV
+          # We use stealth headers so the Blogger bot doesn't hide the "USER####" text from us
+          curl -s -L -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/123.0.0.0" \
+               -H "Referer: https://www.google.com/" \
+               --compressed "$TARGET" > blogger_dump.html
+
+      - name: "Identify Bot Response"
+        id: detector
+        run: |
+          # Look for the specific pattern you saw: "Answer: It seems that your repository..."
+          # Also look for any USER#### IDs appearing on the page
+          if grep -qE "Answer:|USER[0-9]{4}|failed" blogger_dump.html; then
+            echo "BOT_RESPONDED=true" >> $GITHUB_ENV
+            
+            # Extract the specific text the bot wrote to show you in the report
+            # This grabs 2 lines of context around the "Answer"
+            grep -C 2 "Answer:" blogger_dump.html > bot_message.txt || echo "Pattern found but hidden in script" > bot_message.txt
           fi
 
-      - name: "Lock and Flag"
-        if: env.MATCH_FOUND == 'true'
+      - name: "Report Bot to GitHub"
+        if: env.BOT_RESPONDED == 'true'
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          ISSUE_URL: ${{ github.event.issue.html_url }}
-          COMMENT_ID: ${{ github.event.comment.id }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN}}
+          REPO: "DeveloperTryingToCodeLikeOtherOfThem/pxt-hardware-programming-docs"
         run: |
-          # Close and Lock the issue immediately to stop the spam flood
-          gh issue close "$ISSUE_URL" --reason "not planned"
-          gh issue lock "$ISSUE_URL" --reason "spam"
-          
-          # Add a warning label
-          gh issue edit "$ISSUE_URL" --add-label "threat-detected"
-
-      - name: "Report to Watchdog"
-        if: env.MATCH_FOUND == 'true'
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          # Path to your private forensic repo
-          WATCHDOG_REPO: "DeveloperTryingToCodeLikeOtherOfThem/workflow-testing"
-        run: |
-          gh issue create --repo "$WATCHDOG_REPO" \
-            --title "🚨 BOT NEUTRALIZED: $REASON" \
-            --body "A bot tried to post a malicious link in the public repo.
-            **Bot User:** ${{ github.event.sender.login }}
-            **Issue:** ${{ github.event.issue.html_url }}
-            **Action Taken:** Issue Closed and Locked."
+          MSG=$(cat bot_message.txt)
+          gh issue create --repo "$REPO" \
+            --title "📢 NEW BOT ACTIVITY ON BLOGGER" \
+            --body "### The Tracker caught a bot update on the suspicious site:
+            
+            **Detected Text:**
+            \`\`\`text
+            $MSG
+            \`\`\`
+            
+            **Target Site:** https://enablesmartspirit.blogspot.com/
+            **Status:** Bot is actively generating fake triage reports." \
+            --label "threat-detected"
