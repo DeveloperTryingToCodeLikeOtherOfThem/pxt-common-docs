@@ -12,35 +12,25 @@ jobs:
       contents: read
     steps:
       - name: Install Copilot CLI
-        run: |
-          # 2026 Installation Method
-          npm install -g @github/copilot
+        run: npm install -g @github/copilot
           
-      - name: Authenticate Agent
-        env:
-          # Use your PAT stored in Secrets
-          COPILOT_TOKEN: ${{ secrets.COPILOT_TOKEN }}
-        run: |
-          # Force the CLI to store the session locally in the runner
-          echo "$COPILOT_TOKEN" | copilot auth login --with-token
-
       - name: Copilot Forensic Scan
         id: scanner
         env:
-          # Required for 2026 Agentic Web Fetching
+          # In 2026, the CLI uses these variables for non-interactive auth
           COPILOT_GITHUB_TOKEN: ${{ secrets.COPILOT_TOKEN }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           TARGET="https://enablesmartspirit.blogspot.com/"
           
-          # 2026 AUTOPILOT COMMAND:
-          # --autopilot: Runs the task end-to-end without asking for approval
-          # --allow-all-tools: Gives permission to use the web-fetcher tool
-          # --quiet: Ensures only the data is returned, no AI chatter
+          # 2026 PROGRAMMATIC MODE:
+          # -p: Passes the prompt non-interactively.
+          # --allow-all-tools: Grants the agent permission to use 'web_fetch'.
+          # --quiet: Suppresses progress spinners for clean output.
           
-          REPORT=$(copilot -p "Analyze the source code of $TARGET. Is the 'AGC CSR' script present? What is the version? If the site is a 404, respond ONLY with '404'." --autopilot --allow-all-tools --quiet)
+          REPORT=$(copilot -p "Analyze $TARGET. Is the 'AGC CSR' script present? If the site is a 404, respond ONLY with '404'." --allow-all-tools --quiet)
           
-          # Save to environment using HEREDOC to prevent shell injection errors
+          # Cleanly save the AI's findings
           echo "REPORT_DATA<<EOF" >> $GITHUB_ENV
           echo "$REPORT" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
@@ -51,17 +41,15 @@ jobs:
         run: |
           TARGET="enablesmartspirit.blogspot.com"
           
-          # Check if the AI returned a 404/Deleted status
+          # Check for the specific '404' string from the AI
           if [[ "$REPORT_DATA" == *"404"* ]]; then
             gh issue create --title "🎉 Hooray: Bot Node Neutralized" \
-              --body "Copilot reports that $TARGET is no longer reachable. The 'Notice Detected' loop is officially gone." \
+              --body "Copilot reports that $TARGET is no longer reachable. The investigation is complete." \
               --label "neutralized"
           else
             gh issue create --title "⚠️ Warning: Bot Node Still Active" \
-              --body "### AI Forensic Report
+              --body "### Copilot 2026 Agent Report
               **Target:** $TARGET
-              **Analysis:** $REPORT_DATA
-              
-              *Automated log created via GitHub Copilot CLI Agent.*" \
+              **Analysis:** $REPORT_DATA" \
               --label "threat-detected"
           fi
