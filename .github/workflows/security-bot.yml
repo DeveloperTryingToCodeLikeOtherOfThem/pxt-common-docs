@@ -12,43 +12,56 @@ jobs:
       contents: read
     steps:
       - name: Install Copilot CLI
-        run: npm install -g @github/copilot
+        run: |
+          # 2026 Installation Method
+          npm install -g @github/copilot
           
+      - name: Authenticate Agent
+        env:
+          # Use your PAT stored in Secrets
+          COPILOT_TOKEN: ${{ secrets.COPILOT_TOKEN }}
+        run: |
+          # Force the CLI to store the session locally in the runner
+          echo "$COPILOT_TOKEN" | copilot auth login --with-token
+
       - name: Copilot Forensic Scan
         id: scanner
         env:
-          # In 2026, the CLI requires this specific name for non-interactive tokens
+          # Required for 2026 Agentic Web Fetching
           COPILOT_GITHUB_TOKEN: ${{ secrets.COPILOT_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           TARGET="https://enablesmartspirit.blogspot.com/"
           
-          # 1. We use 'copilot -p' for the prompt.
-          # 2. We use --allow-all-tools to grant permission for web_fetch.
-          # 3. We use the --token flag to FORCE the CLI to see your secret.
+          # 2026 AUTOPILOT COMMAND:
+          # --autopilot: Runs the task end-to-end without asking for approval
+          # --allow-all-tools: Gives permission to use the web-fetcher tool
+          # --quiet: Ensures only the data is returned, no AI chatter
           
-          REPORT=$(copilot -p "Analyze $TARGET. Is 'AGC CSR' present? If 404, say '404'." \
-            --token "$COPILOT_GITHUB_TOKEN" \
-            --allow-all-tools)
+          REPORT=$(copilot -p "Analyze the source code of $TARGET. Is the 'AGC CSR' script present? What is the version? If the site is a 404, respond ONLY with '404'." --autopilot --allow-all-tools --quiet)
           
+          # Save to environment using HEREDOC to prevent shell injection errors
           echo "REPORT_DATA<<EOF" >> $GITHUB_ENV
           echo "$REPORT" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
 
-     
       - name: Log Findings to Private Issue
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          TARGET="enablesmartspirit.blogspot.com"
+          
+          # Check if the AI returned a 404/Deleted status
           if [[ "$REPORT_DATA" == *"404"* ]]; then
-            gh issue create --title "🎉 Hooray: This domain does not exist." \
-              --body "Copilot reports that $TARGET is no longer reachable. Investigation complete." \
+            gh issue create --title "🎉 Hooray: Bot Node Neutralized" \
+              --body "Copilot reports that $TARGET is no longer reachable. The 'Notice Detected' loop is officially gone." \
               --label "neutralized"
           else
-            gh issue create --title "⚠️ Warning: This domain exists and do not click it." \
-              --body "### Copilot Forensic Report
-              **Target:** enablesmartspirit.blogspot.com
+            gh issue create --title "⚠️ Warning: Bot Node Still Active" \
+              --body "### AI Forensic Report
+              **Target:** $TARGET
               **Analysis:** $REPORT_DATA
               
-              *Automated log created via GitHub Copilot CLI.*" \
+              *Automated log created via GitHub Copilot CLI Agent.*" \
               --label "threat-detected"
           fi
