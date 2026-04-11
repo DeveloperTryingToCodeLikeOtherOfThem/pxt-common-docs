@@ -1,5 +1,21 @@
 <img width="907" height="68" alt="image" src="https://github.com/user-attachments/assets/65d9a9ac-067c-48df-adf9-ecfa8551205a" />
 
+``` html
+ <link crossorigin="" href="https://ehpdsfzrqsxgwi9vl8s23wi8sxv27lelokvxd1vw.apibrainly.my.id" rel="preconnect" />
+    <link crossorigin="" href="https://cdnjs.cloudflare.com" rel="preconnect" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+    <meta name="google-adsense-platform-account" content="ca-host-pub-1556223355139109" />
+    <meta name="google-adsense-platform-domain" content="blogspot.com" />
+    <script type="text/javascript" language="javascript">
+      // Supply ads personalization default for EEA readers
+  // See https://www.blogger.com/go/adspersonalization
+  adsbygoogle = window.adsbygoogle || [];
+  if (typeof adsbygoogle.requestNonPersonalizedAds === &#39;undefined&#39;) {
+    adsbygoogle.requestNonPersonalizedAds = 1;
+  }
+    </script>
+```
+
 ``` js
  document.addEventListener(&#39;DOMContentLoaded&#39;, function(event) {
       window.cookieChoices &amp;&amp; cookieChoices.showCookieConsentBar &amp;&amp; cookieChoices.showCookieConsentBar(
