@@ -5,48 +5,47 @@ on:
   workflow_dispatch:
 
 jobs:
-  ai-inspect:
+  inspect-without-ai:
     runs-on: ubuntu-latest
     permissions:
       issues: write
-      contents: read
     steps:
-      - name: Install Copilot CLI
-        run: npm install -g @github/copilot
-          
-      - name: Copilot Forensic Scan
-        id: scanner
-        env:
-          # Official 2026 Auth: CLI looks for this variable first
-          COPILOT_GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Forensic Web Grab
+        id: grab
         run: |
           TARGET="https://enablesmartspirit.blogspot.com/"
+          # Grab the site content. -f fails on 404, -L follows redirects.
+          curl -s -L -f "$TARGET" > site_source.txt || echo "OFFLINE" > site_source.txt
           
-          # 2026 UPDATED FLAGS:
-          # --mode autopilot: Replaces --yes and --one-shot for automation.
-          # --silent: Removes progress spinners that break shell variables.
-          # -p: Your investigation prompt.
-          
-          REPORT=$(copilot -p "Analyze $TARGET. Is 'AGC CSR' present? If 404, say '404'." --mode autopilot --silent)
-          
-          echo "REPORT_DATA<<EOF" >> $GITHUB_ENV
-          echo "$REPORT" >> $GITHUB_ENV
-          echo "EOF" >> $GITHUB_ENV
+          if grep -q "OFFLINE" site_source.txt; then
+            echo "RESULT=404" >> $GITHUB_ENV
+          elif grep -q "AGC CSR" site_source.txt; then
+            echo "RESULT=DETECTED" >> $GITHUB_ENV
+          else
+            echo "RESULT=CLEAN" >> $GITHUB_ENV
+          fi
 
       - name: Log Findings
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO: "DeveloperTryingToCodeLikeOtherOfThem/workflow-testing"
         run: |
-          # Logic check: if AI output contains '404' or is empty (due to blocks)
-          if [[ "$REPORT_DATA" == *"404"* ]] || [[ -z "$REPORT_DATA" ]]; then
+          if [[ "$RESULT" == "404" ]]; then
             gh issue create --repo "$REPO" \
-              --title "🎉 Hooray: Node Neutralized" \
-              --body "The site is dead or unreachable. Check logs if this was unexpected." \
+              --title "🎉 Node Neutralized" \
+              --body "The site is officially 404 or Offline. No AI quota used." \
               --label "neutralized"
+          elif [[ "$RESULT" == "DETECTED" ]]; then
+            gh issue create --repo "$REPO" \
+              --title "⚠️ Warning: AGC CSR Detected" \
+              --body "The malicious script was found in the source code of $TARGET." \
+              --label "threat-detected"
           else
             gh issue create --repo "$REPO" \
-              --title "⚠️ Warning: Node Active" \
-              --body "### Forensic Report\n$REPORT_DATA" \
-              --label "threat-detected"
+              --title "🔍 Scan Clean" \
+              --body "Site is up, but 'AGC CSR' was not found in this scan." \
+              --label "monitored"
           fi
