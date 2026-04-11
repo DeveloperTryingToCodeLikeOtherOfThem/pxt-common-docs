@@ -17,18 +17,19 @@ jobs:
       - name: Copilot Forensic Scan
         id: scanner
         env:
-          # Use the specific token variable the CLI looks for in 2026
           COPILOT_GITHUB_TOKEN: ${{ secrets.COPILOT_TOKEN }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # 2026 Requirement: Tell the AI which model to use to avoid the 'Choice' hang
+          COPILOT_MODEL: gpt-4o 
         run: |
           TARGET="https://enablesmartspirit.blogspot.com/"
           
-          # 1. Use 'copilot' directly.
-          # 2. Use -p followed immediately by the prompt.
-          # 3. Use --allow-all to prevent the 'Do you trust this folder?' prompt.
-          # 4. Use -s (silent) to get just the raw data for your report.
+          # 1. Use 'copilot' in Autopilot mode for total automation.
+          # 2. Use -p for the prompt.
+          # 3. Use --allow-all-tools (the new version of --allow-all).
+          # 4. Use --quiet to ensure only the final answer is saved.
           
-          REPORT=$(copilot -p "Analyze the source code of $TARGET. Is the 'AGC CSR' script present? What is the version? If the site is a 404, respond ONLY with '404'." --allow-all -s)
+          REPORT=$(copilot -p "Analyze $TARGET. Is 'AGC CSR' present? If 404, say '404'." --autopilot --allow-all-tools --quiet)
           
           echo "REPORT_DATA<<EOF" >> $GITHUB_ENV
           echo "$REPORT" >> $GITHUB_ENV
