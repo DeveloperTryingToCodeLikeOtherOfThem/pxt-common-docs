@@ -18,7 +18,7 @@ jobs:
         id: scanner
         env:
           # Official 2026 Auth: CLI looks for this variable first
-          COPILOT_GITHUB_TOKEN: ${{ secrets.COPILOT_TOKEN }}
+          COPILOT_GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           TARGET="https://enablesmartspirit.blogspot.com/"
           
