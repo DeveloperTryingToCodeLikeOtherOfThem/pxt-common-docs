@@ -17,14 +17,17 @@ jobs:
       - name: Copilot Forensic Scan
         id: scanner
         env:
-          # Use your specific Secret
-          COPILOT_GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          # Official 2026 Auth: CLI looks for this variable first
+          COPILOT_GITHUB_TOKEN: ${{ secrets.COPILOT_TOKEN }}
         run: |
           TARGET="https://enablesmartspirit.blogspot.com/"
           
-          # 2026 Non-Interactive Logic
-          # We force the token inline and use --yes to bypass prompts
-          REPORT=$(COPILOT_GITHUB_TOKEN="${{ secrets.COPILOT_TOKEN }}" copilot -p "Analyze $TARGET. Is 'AGC CSR' present? If 404, respond ONLY with '404'." --allow-all-tools --yes)
+          # 2026 UPDATED FLAGS:
+          # --mode autopilot: Replaces --yes and --one-shot for automation.
+          # --silent: Removes progress spinners that break shell variables.
+          # -p: Your investigation prompt.
+          
+          REPORT=$(copilot -p "Analyze $TARGET. Is 'AGC CSR' present? If 404, say '404'." --mode autopilot --silent)
           
           echo "REPORT_DATA<<EOF" >> $GITHUB_ENV
           echo "$REPORT" >> $GITHUB_ENV
@@ -33,17 +36,17 @@ jobs:
       - name: Log Findings
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # Providing the full path to your private repo
-          TARGET_REPO: "DeveloperTryingToCodeLikeOtherOfThem/workflow-testing"
+          REPO: "DeveloperTryingToCodeLikeOtherOfThem/workflow-testing"
         run: |
-          if [[ "$REPORT_DATA" == *"404"* ]]; then
-            gh issue create --repo "$TARGET_REPO" \
+          # Logic check: if AI output contains '404' or is empty (due to blocks)
+          if [[ "$REPORT_DATA" == *"404"* ]] || [[ -z "$REPORT_DATA" ]]; then
+            gh issue create --repo "$REPO" \
               --title "🎉 Hooray: Node Neutralized" \
-              --body "The link is dead. Investigation complete." \
+              --body "The site is dead or unreachable. Check logs if this was unexpected." \
               --label "neutralized"
           else
-            gh issue create --repo "$TARGET_REPO" \
+            gh issue create --repo "$REPO" \
               --title "⚠️ Warning: Node Active" \
-              --body "### Analysis Results\n$REPORT_DATA" \
+              --body "### Forensic Report\n$REPORT_DATA" \
               --label "threat-detected"
           fi
