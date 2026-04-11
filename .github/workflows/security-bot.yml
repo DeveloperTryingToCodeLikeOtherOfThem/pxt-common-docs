@@ -19,17 +19,15 @@ jobs:
         env:
           COPILOT_GITHUB_TOKEN: ${{ secrets.COPILOT_TOKEN }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # 2026 Requirement: Tell the AI which model to use to avoid the 'Choice' hang
-          COPILOT_MODEL: gpt-4o 
         run: |
           TARGET="https://enablesmartspirit.blogspot.com/"
           
-          # 1. Use 'copilot' in Autopilot mode for total automation.
-          # 2. Use -p for the prompt.
-          # 3. Use --allow-all-tools (the new version of --allow-all).
-          # 4. Use --quiet to ensure only the final answer is saved.
+          # 2026 Automation Syntax:
+          # 1. 'copilot task' is the dedicated agent for checking sites/code.
+          # 2. --allow-all handles permissions and silences unnecessary logs.
+          # 3. We wrap the result in a clean variable.
           
-          REPORT=$(copilot -p "Analyze $TARGET. Is 'AGC CSR' present? If 404, say '404'." --autopilot --allow-all-tools --quiet)
+          REPORT=$(copilot task "Check if $TARGET exists. If it does, find the 'AGC CSR' version. If it is a 404, respond ONLY with '404'." --allow-all)
           
           echo "REPORT_DATA<<EOF" >> $GITHUB_ENV
           echo "$REPORT" >> $GITHUB_ENV
