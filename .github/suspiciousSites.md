@@ -10,4 +10,4 @@
     });
 ```
 
-**If you ever encountered any website looks like this, exit out immediately, it is **not** safe to view.**
+**If you ever encountered any website looks like this, exit out immediately.**
