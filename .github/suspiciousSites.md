@@ -159,4 +159,128 @@
             ${answer?.content || ""}
 ```
 
+``` html
+ async function load_content_qa(data) {
+        const time_format_publish = new Date(data?.data_content?.e || data?.data_content?.c || new Date()).toLocaleDateString("id-ID", {
+            year: "numeric",
+            month: "long",
+            day: "numeric"
+        });
+        const title_content = data?.data_content?.t || "";
+        const description_content = data?.data_content?.d || title_content;
+        const author_name = data?.data_content?.data?.author?.nick || "Anonyme";
+        const total_views = data?.data_content?.data?.content?.length || 0;
+        const total_comment = data?.data_content?.t?.length || data?.data_content?.d || 0;
+        const total_shares = data?.data_content?.data?.subject?.name?.length || 0;
+        const data_question = data?.data_content?.data?.content || "";
+
+        // ganti title-headers
+        templateQuestAnswer = templateQuestAnswer.replaceAll("{{title-headers}}", window.location.hostname);
+
+        templateQuestAnswer = templateQuestAnswer.replaceAll("{{main-content}}", `
+      <article class="blog-post-content">
+          <div class="post-content-wrapper">
+            <div class="post-text" itemscope="" itemtype="https://schema.org/QAPage">
+              <div class="question-section" itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question">
+
+
+                <div class="question-header">
+                    <h2>{{Pertanyaan}}</h2>
+                    <div class="question-meta">
+                      <span class="difficulty"><i class="fas fa-signal"></i> {{Grade}}: ${data?.data_content?.data?.grade?.name || "Other"}</span>
+                      <span class="subject"><i class="fas fa-book"></i> {{Subject}}: ${data?.data_content?.data?.subject?.name || "Other"}</span>
+                    </div>
+                </div>
+                <div class="question-content">
+                    <div itemprop="text name">${data_question}</div>
+                    <div class="question-details">
+                      <div class="asker-info">
+                          <span class="asker-avatar">
+                          <i class="fas fa-user-circle"></i>
+                          </span>
+                          <span class="asker-name">{{Ditanyakan oleh}}: <span itemprop="author" itemscope="" itemtype="https://schema.org/Person"><span itemprop="name"><a itemprop="url" href="#${data?.data_content?.data?.id || author_name.toUpperCase()}">${author_name.toUpperCase()}</a></span></span></span>
+                      </div>
+                      <div class="question-stats">
+                          <span class="views"><i class="fas fa-eye"></i> <span itemprop="upvoteCount">${total_views}</span> {{dilihat}}</span>
+                          <span class="answers"><i class="fas fa-comment-dots"></i> <span itemprop="answerCount">${total_comment}</span> {{jawaban}}</span>
+                      </div>
+                      <meta itemprop="dateCreated" content="${data?.data_content?.c || data?.data_content?.data?.created || new Date().toISOString()}">
+                    </div>
+                </div>
+
+                <div class="responsive-ad ad-after-question">
+                  <div class="ad-placeholder"><span>Responsive Ad After Question</span></div>
+                </div>
+
+                <div class="answers-section">
+                  <h3>{{Jawaban}} (${total_comment})</h3>
+                  {{answer-card}}
+                </div>
+
+
+              </div>
+            </div>
+            <div class="load-more-answers">
+              <button class="load-more-btn">
+                <span class="btn-text">{{Lihat jawaban lainnya}} (${total_comment})</span>
+                <span class="btn-icon"><i class="fas fa-chevron-down"></i></span>
+                <span class="loading-spinner"><i class="fas fa-circle-notch"></i></span>
+              </button>
+            </div>
+
+            <div class="related-posts list-style" itemscope itemtype="https://schema.org/ItemList">
+              <h3 itemprop="name">{{Artikel Terkait}}</h3>
+              <div class="related-posts-list">
+                {{related-posts}}
+              </div>
+            </div>
+
+            <div class="related-posts list-style" itemscope itemtype="https://schema.org/ItemList">
+              <h3 itemprop="name">Recommended Articles</h3>
+              <div class="related-posts-list">
+                {{bl-related-posts}}
+              </div>
+            </div>
+
+          </div>
+      </article>
+    `);
+
+        // ganti intro content
+        templateQuestAnswer = templateQuestAnswer.replaceAll("{{intro-content}}", `
+      <div class="intro-content">
+        <h1>${title_content}</h1>
+          <div class="post-meta-header">
+              <div class="author-info">
+                  <span class="author-avatar">
+                      <i class="fas fa-user-circle"></i>
+                  </span>
+                  <span class="author-name">{{Oleh}}: ${author_name.toUpperCase()}</span>
+              </div>
+              <div class="post-details">
+                  <span class="post-date"><i class="fas fa-calendar"></i> ${time_format_publish}</span>
+                  <span class="post-category"><i class="fas fa-folder"></i> ${data?.data_content?.data?.subject?.name || "Other"}</span>
+                  <span class="read-time"><i class="fas fa-clock"></i> 5 {{menit baca}}</span>
+              </div>
+              <div class="post-stats-header">
+                  <div class="rating">
+                      <div class="stars">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star-half-alt"></i>
+                      </div>
+                      <span>4.5</span>
+                  </div>
+                  <div class="post-info">
+                      <span class="views"><i class="fas fa-eye"></i> ${total_views} {{views}}</span>
+                      <span class="comments"><i class="fas fa-comment"></i> ${total_comment} {{komentar}}</span>
+                      <span class="shares"><i class="fas fa-share-alt"></i> ${total_shares} {{shares}}</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+    `);`
+``
 **If you ever encountered any website have this structure, exit out immediately.**
