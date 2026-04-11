@@ -26,7 +26,7 @@ jobs:
       - name: Copilot Forensic Analysis
         if: env.STATUS != '404'
         env:
-          COPILOT_GITHUB_TOKEN: ${{ secrets.COPILOT_TOKEN }}
+          COPILOT_GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           # We PIPE the text into copilot so it doesn't have to 'search'
           # This uses 0 'Premium Requests' because it's local analysis
