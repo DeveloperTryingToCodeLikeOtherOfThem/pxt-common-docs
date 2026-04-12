@@ -38,7 +38,7 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               title: `Title: ${process.env.PAGE}`,
-              body: "Generated automatically."
+              body: ${{ steps.inference.outputs.response }}
             })
           env:
           PAGE: ${{ steps.extract.outputs.page }}
