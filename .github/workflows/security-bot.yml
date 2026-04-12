@@ -38,12 +38,9 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               title: `Title: ${process.env.PAGE}`,
-              body: ${{ steps.inference.outputs.response }}
+              body: process.env.RESPONSE
             })
           env:
           PAGE: ${{ steps.extract.outputs.page }}
           RESPONSE: ${{ steps.inference.outputs.response }}
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-       
-            
-            
