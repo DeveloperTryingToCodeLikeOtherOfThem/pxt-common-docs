@@ -40,7 +40,7 @@ jobs:
               title: `Title: ${process.env.PAGE}`,
               body: process.env.RESPONSE
             })
-          env:
+        env:
           PAGE: ${{ steps.extract.outputs.page }}
           RESPONSE: ${{ steps.inference.outputs.response }}
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
