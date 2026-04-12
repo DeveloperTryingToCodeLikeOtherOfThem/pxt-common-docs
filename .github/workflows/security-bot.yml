@@ -1,4 +1,4 @@
-name: "Security AI Tracker"
+name: "Security Bot"
 
 on:
   workflow_dispatch:    # Allows you to click "Run" whenever you want
@@ -14,10 +14,9 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run AI Searcher
-        uses: github/ai@v1
-        id: ai
+        id: inference
+        uses: actions/ai-inference@v1
         with:
-          model: gpt-4o-mini
           prompt: |
             You are a search agent that search domains on Blogger or Netlify and explain if they are dangerous or safe.
             Always fetch the site first before responding or otherwise there is no enough information about what is going on.
