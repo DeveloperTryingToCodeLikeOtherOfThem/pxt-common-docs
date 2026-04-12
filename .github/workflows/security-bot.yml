@@ -14,8 +14,10 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run AI Searcher
-        uses: actions/upload-artifact@v7
+        uses: github/ai@v1
+        id: ai
         with:
+          model: gpt-4o-mini
           prompt: |
             You are a search agent that search domains on Blogger or Netlify and explain if they are dangerous or safe.
             Always fetch the site first before responding or otherwise there is no enough information about what is going on.
