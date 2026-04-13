@@ -49,7 +49,7 @@ jobs:
            github.rest.issues.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              title: `Title: Agent Summary,
+              title: `Title: Agent Summary`,
               body: process.env.RESPONSE
             })
         env:
