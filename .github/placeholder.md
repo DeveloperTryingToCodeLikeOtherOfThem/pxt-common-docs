@@ -1,2 +1,1 @@
-[**Do NOT click this link, it is a placeholder incase if other bots are trying to copy this repository's code, it will instead copy the code that implemented those bots.**](https://addss.my.id/magicstar-v1.js?isbot=n&v=e6k7q5g5y3&r=&u=https%3A%2F%2Fasskfcfgv.blogspot.com%2F%22)
-**Warning, this site is not safe to click and as mentioned it is a placeholder for protecting security in this repository, it will be deleted in the near future after I fix this problem.**
+This is a placeholder.
