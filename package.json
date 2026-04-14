@@ -28,7 +28,7 @@
     "docs/fixed-size.md",
     "docs/for-loops-vs-for-element-loops.md",
     "docs/dmesg.md",
-    "docs/cpp/namespaceFields.md",
+    "docs/cpp/accessMembersInANS.md",
     "docs/reference/control/programName.md",
     "docs/reference/control/_onCodeStart.md",
     "docs/reference/control/benchmark.md",
