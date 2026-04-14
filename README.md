@@ -10,10 +10,7 @@ Because of that, you have to review everything here instead. Also, tags and rele
 
 ## Patience for this repository
 Please be patient because I am the **only collaborator plus contributor** for now doing this work.
-If you feel there needs improvements in the documentations, please write the issue. Also, if you think you can fix the bug by your own,
-make a pull request and I will approve the checks if it is appropriate and not incorrect information.
-You will be a contributor if you did write a pull request by yourself and is approved. There are indeed 4 other contributors in this repository, 
-but they are bots doing the work for this repository.
+If you feel there needs improvements in the documentations, please write the issue.
 
 **If you feel this repository's triage is limited, file an issue on a specific PXT target.
 For instance, you have to still make sure the topic is on topic and nothing off topic related things.**
