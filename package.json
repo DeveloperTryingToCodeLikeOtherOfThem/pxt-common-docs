@@ -1,7 +1,7 @@
 {
   "name": "pxt-common-hardware-packages",
   "version": "2.7.3",
-  "description": "For Microsoft MakeCode documentation that contains much more low level methods, properties, performance, etc.",
+  "description": "For Microsoft MakeCode documentation that contains more low level methods, properties, performance, etc.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DeveloperTryingToCodeLikeOtherOfThem/pxt-hardware-programming-docs.git"
