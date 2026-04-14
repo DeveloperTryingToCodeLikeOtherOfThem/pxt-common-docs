@@ -4,8 +4,7 @@ This package does **not** connect to MakeCode's offical runtime docs, which is w
 what this repository is about.
 
 ## Support
-This extension **does not** work in any MakeCode editor because of the issues that were encountered in pxt.json. 
-Because of that, you have to review everything here instead. Also, tags and releases will still be updated, so do **not** worry about that. If you have any questions about this repository, please click on this link here. [Issues: Click Here](https://github.com/DeveloperTryingToCodeLikeOtherOfThem/pxt-hardware-programming-docs/issues). Please do **not** worry if you have questions because it is part of this repository too.
+This repository use to be an extension instead of a package, but now it does **not** work in any MakeCode editor. This is because of the issues that were encountered in pxt.json. Because of that, review everything here instead. Also, tags and releases will still be updated, so do **not** worry about that. If you have any questions about this repository, please click on this link here. [Issues](https://github.com/DeveloperTryingToCodeLikeOtherOfThem/pxt-hardware-programming-docs/issues). Please do **not** worry if you have questions because it is part of this repository too.
 
 
 ## Patience for this repository
