@@ -11,6 +11,6 @@ The stack is handled by the built-in engine, not your code.
 ## Example
 
 ``` ts 
-    const currSc = game.currentScene();
+    const currScene = game.currentScene();
     game.popScene(); 
 ```
