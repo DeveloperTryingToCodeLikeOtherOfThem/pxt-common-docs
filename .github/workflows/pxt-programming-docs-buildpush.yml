@@ -21,8 +21,7 @@ jobs:
   tag-bump-commit:
     uses: ./.github/workflows/tag-bump-commit.yml
     needs: filter-vtags
-    is_vtag: ${{ steps.check.outputs.is_vtag }}
-
+    if: needs.filter-vtags.outputs.is_vtag != 'true'
   buildpush:
     name: buildpush
     runs-on: ubuntu-latest
