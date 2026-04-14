@@ -16,4 +16,4 @@ jobs:
 
        - name: notifyInLog
          run: |
-           echo: "✅ View the opened issue."
+           echo "✅ View the opened issue."
