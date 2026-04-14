@@ -1,0 +1,19 @@
+name: "Issue Created"
+run-name: "Issue Created"
+
+on: 
+   issues:
+      types: [opened] 
+
+jobs:
+   notifyCollaborators:
+     runs-on: ubuntu-latest
+     permissions:  
+        issues: read
+     steps:
+       - name: Checkout Repository
+         uses: actions/checkout@v4
+
+       - name: notifyInLog
+         run: |
+           echo: "✅ View the opened issue."
