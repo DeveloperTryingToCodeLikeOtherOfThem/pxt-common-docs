@@ -1,4 +1,4 @@
-The implementation that implemented the scene stacks are the 2 lines of code here.
+The implemenation of the scene stacks are shown below.
 
 ``` ts
   let _scene: scene.Scene;
