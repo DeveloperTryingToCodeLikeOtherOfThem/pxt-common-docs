@@ -2,7 +2,7 @@
 
 To be a developer, think about how to:
 
-* Break problems into smaller pieces instead of trying to solve everything at once
+* Break problems into smaller pieces instead of trying to solve everything at once 
 
 * Experiment even when you’re unsure — developers learn by trying, not by knowing
 
