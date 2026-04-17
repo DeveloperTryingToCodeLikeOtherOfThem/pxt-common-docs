@@ -4,7 +4,7 @@ I have seen many people ask this question, "How do I delete every single sprite 
 
 ## 1 Create a Backward Loop
 First, you have to make a for loop. 
-`for (let i = allSpr.length - 1; i >= 0; i--) {
+`for (let i = allSpr.length - 1; i >= 0; i--) { 
   // adding code later
  }` 
 
