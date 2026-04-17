@@ -41,6 +41,7 @@
     "docs/reference/game/popScene.md",
     "docs/reference/game/pushScene.md",
     "docs/reference/buffer/bufferList.md",
+    "docs/reference/buffer/create.md",
     "docs/reference/core/pxtbase.h.md",
     "docs/reference/images/monochrome.md",
     "docs/reference/music/soundInstructions.md",
