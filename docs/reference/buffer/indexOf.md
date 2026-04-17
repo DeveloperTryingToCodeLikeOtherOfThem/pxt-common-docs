@@ -1,6 +1,6 @@
 ## Index Of
 
-A sequence of raw bytes that searches through those bytes and returns:
+A sequence of raw bytes that searches through those bytes.
 
 ## Returns
 *  a number which is the postion in the buffer where the element is found. This number
