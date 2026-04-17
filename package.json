@@ -19,7 +19,6 @@
     "docs/soft_panic.md",
     "docs/bufIndexOf.md",
     "docs/limit_of_offsets_for_setNumber.md",
-    "docs/getNumber.md",
     "docs/buffers_vs_arrays.md",
     "docs/bpp.md",
     "docs/analyzing_code.md",
