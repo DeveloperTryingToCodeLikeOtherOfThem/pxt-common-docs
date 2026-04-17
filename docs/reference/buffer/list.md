@@ -1,7 +1,7 @@
 # Buffer List
 A list of members exposed in the Buffer namespace and interface.
  
-## Methods and Properties
+## Buffer Members
 
 * The Buffer.create(size: number) method stores bytes in a fixed size of memory.   
 
