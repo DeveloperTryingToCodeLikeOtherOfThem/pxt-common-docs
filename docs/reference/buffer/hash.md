@@ -6,7 +6,7 @@ Computes a k-bit non-cryptographic hash of the buffer using the FNV-1 algorithm.
 FNV-1 is a fast, non-cryptographic hash algorithm (suitable for checksums, not security)
 
 ## Parameters
- * **bits**: specifies the output width (1-32 bits), determining 
+ * **bits**: the output width (1-32 bits), determining 
 the result range: 0 to 2^bits-1. For example, bits=5 produces values 0-31. Use this for 
 checksums, data validation, or collision detection. Not suitable for cryptographic purposes.
 
