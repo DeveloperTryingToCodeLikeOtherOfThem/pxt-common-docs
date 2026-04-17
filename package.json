@@ -38,6 +38,7 @@
     "docs/reference/game/currentScene.md",
     "docs/reference/game/popScene.md",
     "docs/reference/game/pushScene.md",
+    "docs/reference/buffer/getNumber.md",
     "docs/reference/buffer/setNumber.md",
     "docs/reference/buffer/bufferList.md",
     "docs/reference/buffer/create.md",
