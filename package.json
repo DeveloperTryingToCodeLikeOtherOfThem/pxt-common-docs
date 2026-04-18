@@ -18,6 +18,7 @@
   "files": [
     "docs/soft_panic.md",
     "docs/limit_of_offsets_for_setNumber.md",
+    "docs/test/test.md",
     "docs/buffers_vs_arrays.md",
     "docs/bpp.md",
     "docs/analyzing_code.md",
@@ -86,7 +87,6 @@
     "docs/exportModifier.md",
     "docs/underscore_public_properties_and_methods.md",
     "docs/litAndBigEndian.md",
-    "docs/test.md",
     "docs/numberFormat.md",
     "docs/memory.md",
     "docs/shims.md",
