@@ -1,5 +1,14 @@
-The `helpers._getFactoryInstance(): any` method returns a template for a given data type.
-Here is an example of using the method correctly.
+## _getFactoryInstance
+Gets a factory instance. Useful for registing templates.
+``` sig
+helpers._getFactoryInstance(null, null);
+```
+
+## Returns 
+A factory instance for a given data type.
+
+## Example
+Let us make a rendered imaage template.
 ``` ts
   namespace helpers {
     export function getRenderImageByName (name: string): Image {
