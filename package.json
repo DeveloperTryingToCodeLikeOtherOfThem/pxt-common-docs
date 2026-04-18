@@ -86,6 +86,7 @@
     "docs/exportModifier.md",
     "docs/underscore_public_properties_and_methods.md",
     "docs/litAndBigEndian.md",
+    "docs/test.md",
     "docs/numberFormat.md",
     "docs/memory.md",
     "docs/shims.md",
