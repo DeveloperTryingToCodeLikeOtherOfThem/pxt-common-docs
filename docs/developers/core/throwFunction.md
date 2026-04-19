@@ -1,6 +1,6 @@
 ## Throw function
 
-The throw function throws a value written in the problems pane, similar to the throw syntax. 
+The throw function is a function that throws a value written in the problems pane, similar to the throw syntax. 
 ```
  pxt.throwValue(null);
 ```
