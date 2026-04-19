@@ -14,7 +14,7 @@ export function pushNotificationMessage(options: NotificationOptions): void {
     }
 }
 ```
-[pushNotificationMessage Implementation](https://github.com/microsoft/pxt/blob/master/skillmap/src/lib/notifications.ts#L7-L9) 
+[pushNotificationMessage Implementation](https://github.com/microsoft/pxt/blob/master/react-common/components/Notification.tsx#L73-L82)
 
 It then processes into the warning notification function, which gets passed by pushNotificationMessage. 
 ``` ts
