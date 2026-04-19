@@ -4,7 +4,7 @@ translation system can extract it and translate into other languages.
 
 ## Implementation
 
-The implementation looks like this under the hood.
+The implementation behaves like this under the hood.
 ``` ts
     function lf(s: string, ...args: any[]): string { // @ignorelf@
         let lfmt = _localizeStrings[s] || s;
