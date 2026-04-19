@@ -1,7 +1,6 @@
 ## PXT Harware Programming Docs
 This repository is a package for more comprensive guides about [Microsoft MakeCode](https://makecode.com/) 
-This package does **not** connect to MakeCode's offical runtime docs, which is why I mentioned previously 
-what this repository is about. It is useful for helping you find more documentations you are confused with and undocumented documentations, such as
+This package does **not** connect to MakeCode's offical runtime docs. It is useful for helping you find more documentations you are confused with and undocumented documentations, such as
 `programHash` and `programName.`
 
 ## Support
