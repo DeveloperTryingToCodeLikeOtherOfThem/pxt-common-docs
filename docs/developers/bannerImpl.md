@@ -1,6 +1,6 @@
 ## Warning Banners Implementation
 The implementation of the warning banners are implemented in few steps, which first are implemented in the `pushNotificationMessage` function.
-The function then pushes a new message into the stack and renders it.
+The function then pushes a new message into the stack and renders it with a notification initalized boolean.
 
 ``` ts
 export function pushNotificationMessage(options: NotificationOptions): void {
