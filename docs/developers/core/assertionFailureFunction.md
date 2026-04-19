@@ -1,5 +1,5 @@
 ## Assert Failure Function
-The assertion failure function checks if the condition is true.
+The assertion failure function is a function that checks if the condition is true.
 The function is **not** exposed in any PXT platform, instead use a shim to access
 this function.
 
