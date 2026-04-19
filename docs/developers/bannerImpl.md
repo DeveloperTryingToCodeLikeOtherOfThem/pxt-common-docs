@@ -15,7 +15,7 @@ export function pushNotificationMessage(options: NotificationOptions): void {
 ```
 [pushNotificationMessage Implementation](https://github.com/microsoft/pxt/blob/master/skillmap/src/lib/notifications.ts#L7-L9) 
 
-It then processes into the warning notification function, a higher level function that gets passed by pushNotificationMessage. In the end, all these steps get executed by `showNotificationMsg`. And finally, gets exposed to `errorNotification` and `warningNotification.`
+It then processes into the warning notification function, which gets passed by pushNotificationMessage. And then all these steps get executed by `showNotificationMsg`.  Finally, these functions then be called in `errorNotification` and `warningNotification.`
 
 ``` ts
 function showNotificationMsg(kind: string, msg: string) {
