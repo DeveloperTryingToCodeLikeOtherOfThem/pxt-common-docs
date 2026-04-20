@@ -23,8 +23,3 @@ knowing how to code correctly. If this is your first time for coding or using th
 
 For more information about Fixed Point Math with 8 fractional bits after the decimal point (Fx8), please read this file.
 [fixed point](https://makecode.microbit.org/---docs?md=%23%23%20Fixed%20Point%20in%20MakeCode%20Arcade%20%0A%0AFixed%20point%20is%20a%20numeric%20format%20that%20specifies%20how%20many%20fractional%20bits%20after%20the%20binary%20point.%20Microsoft%20MakeCode%20Arcade%20uses%208%20bits%20after%20the%20decimal%20point%20because%20the%20engine%20needs%20sub-pixel%20movement%2C%20performance%2C%20and%20memory.%0A)
-If the link does not work, **look for the fixed_point md (MarkDown) file in the files tab.**
-Another way to find the link is by clicking the link, and then after the error image shows:
-<img width="377" height="111" alt="image" src="https://github.com/user-attachments/assets/4f39e7ff-953d-4532-9073-4e45318e12c6" />.
-
-Click on the underlined message (the underline is underlined in blue) showing "reloading the page."
