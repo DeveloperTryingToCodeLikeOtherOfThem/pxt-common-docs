@@ -3,7 +3,7 @@ The **`Buffer`** object is used to represent a contiguous block of memory
 
 ## Description
 
-Buffers are useful for managing memory. They are useful
+Buffers are useful for managing memory. They are convenient
 for storing data without overflowing.
 
 ## Members
