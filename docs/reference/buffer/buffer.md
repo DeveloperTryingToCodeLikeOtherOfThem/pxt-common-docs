@@ -40,9 +40,9 @@ for storing data without overflowing.
  
  breaks  buffer into pieces, none exceeding  specified size. 
 
- Buffer.isReadOnly() reads if 
+ Buffer.isReadOnly() 
  
- buffer cannot be modified, orwise it returns false
+ reads if the buffer cannot be modified, otherwise it returns false
 
  Buffer.hash(bits: int32)
  
