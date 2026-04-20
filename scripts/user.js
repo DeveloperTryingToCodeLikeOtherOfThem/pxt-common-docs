@@ -1,6 +1,6 @@
 function generateUser() {
   createProfile();
-  return "USER" + Math.randomRange(1000, 9999);
+  return "USER" + randomRange(1000, 9999);
 } 
 generateUser();
 
@@ -15,8 +15,7 @@ function createProfile() {
   });
 }
 
- namespace Math {
-   export function randomRange(min: number, max: number): number {
+function randomRange(min, max) {
             if (min == max) return min;
             if (min > max) {
                 let t = min;
@@ -27,5 +26,3 @@ function createProfile() {
                 return min + Math.floor(Math.random() * (max - min + 1));
             else
                 return min + Math.random() * (max - min);
-   }
-}
