@@ -2,7 +2,7 @@
 Registers a handler that runs whenever a scene is pushed onto the scene stack.
 
 ## Parameters
-handler: the code that runs
+**handler**: the code that runs
 
 ## Example
 Add a new sprite when the handler is registered.
