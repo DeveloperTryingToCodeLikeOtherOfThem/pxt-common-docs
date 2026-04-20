@@ -2,7 +2,7 @@
 The //% helper annotation links an exported function to a runtime helper in a namespace, 
 so calls to the exported function are replaced with the helper’s implementation at compile time.
 
-## Dealing with Help
+## Making Your Documentation Load
 1. Make sure you first write `github:`, so MakeCode knows to fetch a repository on GitHub
 2. Write the repository's name **without any spaces after writing the colon**
 3. Add a slash command to tell the compiler to read a specific file in the repository
