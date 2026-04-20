@@ -1,5 +1,5 @@
 ## Buffer
-The **`Buffer`** object is used to represent a contiguous block of memory
+The `Buffer` object is used to represent a contiguous block of memory of bytes.
 
 ## Description
 
@@ -8,26 +8,48 @@ for storing data without overflowing.
 
 ## Methods
 
-* The Buffer.create(size: number) method stores bytes in a fixed size of memory.   
+ Buffer.create(size: number)
+ 
+ allocates a new buffer in fixed size of memory.   
 
-* The Buffer.setNumber(format: NumberFormat, offset: number, value: number) method writes a number in a specified format in the buffer 
+ Buffer.setNumber(format: NumberFormat, offset: number, value: number)
+ 
+ writes a number in a specified format in  buffer 
 
-* The Buffer.getNumber(format: NumberFormat, offset: number) method reads a number in a specified format in the buffer 
+ Buffer.getNumber(format: NumberFormat, offset: number) 
+ 
+ reads a number in a specified format in  buffer 
 
-* The Buffer.setUint8(offset: number, value: number) method writes an unsigned number in a particular location in the buffer 
+ Buffer.setUint8(offset: number, value: number)  
+ 
+ writes an unsigned number in a particular location in  buffer 
 
-* The Buffer.getUint8(offset: number) method reads an unsigned number in a particular location in the buffer 
+ Buffer.getUint8(offset: number)  
+ 
+ reads an unsigned number in a particular location in  buffer 
 
-* The Buffer.write(dstOffset: number, src: Buffer) method writes contents of the buffer merged into the current buffer (the buffer your using)
+ Buffer.write(dstOffset: number, src: Buffer)  
+ 
+ writes contents of  buffer merged into  current buffer ( buffer your using)
 
-*  The Buffer.equals(other: Buffer) method checks if 2 buffers hold the same data
+ Buffer.equals(or: Buffer)  
+ 
+ checks if 2 buffers hold  same data
 
-*  The Buffer.chunked(maxSize: number): Buffer[] method breaks the buffer into pieces, none exceeding the specified size. 
+ Buffer.chunked(maxSize: number): Buffer[]  
+ 
+ breaks  buffer into pieces, none exceeding  specified size. 
 
-* The Buffer.isReadOnly() method reads if the buffer cannot be modified, otherwise it returns false
+ Buffer.isReadOnly() reads if 
+ 
+ buffer cannot be modified, orwise it returns false
 
- * The Buffer.hash(bits: int32) method computes a k-bit non-cryptographic hash of the buffer using 
-  the FNV-1 algorithm. 
+ Buffer.hash(bits: int32)
+ 
+ computes a k-bit non-cryptographic hash of  buffer using 
+ FNV-1 algorithm. 
 
 ## Properties
-* The Buffer.length property returns the total area of the buffer
+  Buffer.length 
+  
+  returns total length of buffer
