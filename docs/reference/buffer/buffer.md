@@ -6,7 +6,7 @@ The **`Buffer`** object is used to represent a contiguous block of memory
 Buffers are useful for managing memory. They are convenient
 for storing data without overflowing.
 
-## Members
+## Methods
 
 * The Buffer.create(size: number) method stores bytes in a fixed size of memory.   
 
@@ -29,4 +29,5 @@ for storing data without overflowing.
  * The Buffer.hash(bits: int32) method computes a k-bit non-cryptographic hash of the buffer using 
   the FNV-1 algorithm. 
 
+## Properties
 * The Buffer.length property returns the total area of the buffer
