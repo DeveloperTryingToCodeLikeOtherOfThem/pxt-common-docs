@@ -39,6 +39,7 @@
     "docs/reference/game/popScene.md",
     "docs/reference/game/eventContext.md",
     "docs/reference/game/pushScene.md",
+    "docs/reference/game/addScenePushHandler",
     "docs/reference/buffer/getNumber.md",
     "docs/reference/buffer/setNumber.md",
     "docs/reference/buffer/indexOf.md",
