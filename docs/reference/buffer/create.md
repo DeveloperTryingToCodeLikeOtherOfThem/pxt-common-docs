@@ -3,7 +3,7 @@ Allocates a new buffer in a fixed size of [bytes](https://github.com/DeveloperTr
 ``` sig
  Buffer.create(null);
 ```
-A **buffer** is a block of contiguous memory.
+The **buffer** is a block of contiguous memory.
 
 Additionally, when allocating a buffer, there is no meaning to represent the bytes. 
 This is because allocating the buffer is simply storing the amount of memory into the RAM (Random Access Memory).
