@@ -1,5 +1,5 @@
 ## setDebugFlags
-Log the debugger's debug flags.
+Set the debugger's debug flags and are logged.
 ``` sig
    control.setDebugFlags(null);
 ```
