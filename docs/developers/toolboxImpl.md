@@ -2,7 +2,7 @@
 
 In the core, the implementation of the toolbox uses  a map to get all the
 core namespaces and regular namespaces, which are extensions or libraries 
-not outside of pxsim.
+not outside of pxsim:
 ``` ts
 
     export const blockColors: Map<number | string> = {
