@@ -1,10 +1,7 @@
 name: Auto‑Generate Docs Index
 
 on:
-  push:
-    paths:
-      - "docs/**"
-      - "scripts/generate-docs-index.js"
+   workflow_dispatch
 
 jobs:
   update-index:
