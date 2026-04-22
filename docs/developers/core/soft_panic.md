@@ -5,7 +5,7 @@
 ``` cpp
     void pxtrt::panic(int code) {
      soft_panic(code);
-    }
+    } 
 ``` 
 
 Here is the implementation of **soft_panic.**
