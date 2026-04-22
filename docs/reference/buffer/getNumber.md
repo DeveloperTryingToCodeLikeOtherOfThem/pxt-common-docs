@@ -1,5 +1,9 @@
 ## Get Number
 
+``` sig
+    Buffer.create(null).getNumber(null, null);
+```
+
 Reads a value at a specfic location (offset) in the buffer.
 
 ## Parameters
