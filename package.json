@@ -16,7 +16,6 @@
     "generate-docs-index": "node ./scripts/generate-docs-index.js"
   },
   "files": [
-    "docs/soft_panic.md",
     "docs/limit_of_offsets_for_setNumber.md",
     "docs/test/test.md",
     "docs/buffers_vs_arrays.md",
@@ -61,6 +60,7 @@
     "docs/panic.md",
     "docs/auto-fill-sample.md",
     "docs/internal_properties.md",
+    "docs/developers/soft_panic.md",
     "docs/developers/implOfProgramName.md",
     "docs/developers/core/localizeFormat.md",
     "docs/developers/core/assertionFailureFunction.md",
