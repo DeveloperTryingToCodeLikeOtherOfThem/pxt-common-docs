@@ -17,13 +17,13 @@ function createProfile() {
 
 function randomRange(min, max) {
     if (min == max) return min;
-        if (min > max) {
-            let t = min;
-            min = max;
-            max = t;
-            }
-        if (Math.floor(min) == min && Math.floor(max) == max)
-            return min + Math.floor(Math.random() * (max - min + 1));
-        else
-            return min + Math.random() * (max - min);
+    if (min > max) {
+        let t = min;
+        min = max;
+        max = t;
+    }
+    if (Math.floor(min) == min && Math.floor(max) == max)
+        return min + Math.floor(Math.random() * (max - min + 1));
+    else
+        return min + Math.random() * (max - min);
 }
