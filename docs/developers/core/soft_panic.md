@@ -8,7 +8,7 @@
     }
 ```
 
-Here is how soft_panic is built.
+Here is the implementation of **soft_panic.**
 
 Code in file pxt-common-packages/libs/core---vm/scheduler.cpp:
 ``` cpp
