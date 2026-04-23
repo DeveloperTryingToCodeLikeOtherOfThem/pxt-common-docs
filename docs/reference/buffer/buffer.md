@@ -1,11 +1,6 @@
 ## Buffer
 The `Buffer` object is used to represent a contiguous block of memory of bytes.
 
-## Description
-
-Buffers are useful for managing memory. They are convenient
-for storing data without overflowing.
-
 ## Methods
 
  Buffer.create(size: number)
