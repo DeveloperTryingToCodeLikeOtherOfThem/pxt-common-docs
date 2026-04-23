@@ -1,55 +1,58 @@
-name: "📡 Blogger Bot Tracker"
+name: "Security Bot"
 
 on:
-  schedule:
-    - cron: '0 * * * *' # Runs every hour, on the hour
-  workflow_dispatch:    # Allows you to click "Run" whenever you want
+  workflow_dispatch:    # Triggers anytime any collaborators in this repository clicks run
 
 jobs:
-  scrape-blogger:
+  suspicious-bot:
     runs-on: ubuntu-latest
     permissions:
       issues: write
+      models: read
+      contents: read
 
-    steps:
-      - name: "Forensic Fetch"
-        run: |
-          TARGET="https://enablesmartspirit.blogspot.com/"
-          
-          # We use stealth headers so the Blogger bot doesn't hide the "USER####" text from us
-          curl -s -L -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/123.0.0.0" \
-               -H "Referer: https://www.google.com/" \
-               --compressed "$TARGET" > blogger_dump.html
+    steps: 
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: "Identify Bot Response"
-        id: detector
-        run: |
-          # Look for the specific pattern you saw: "Answer: It seems that your repository..."
-          # Also look for any USER#### IDs appearing on the page
-          if grep -qE "Answer:|USER[0-9]{4}|failed" blogger_dump.html; then
-            echo "BOT_RESPONDED=true" >> $GITHUB_ENV
+      - name: Run AI Searcher
+        id: inference
+        uses: actions/ai-inference@v1
+        with:
+          prompt: |
+            You are a search agent that search domains on Blogger or Netlify and explain if they are dangerous or safe.
+            Always fetch the site first before responding or otherwise there is no enough information about what is going on.
+            Your job is to share what suspicious things you have found in that website. Here are the websites you are searching 
+            for. 
+            1.  https://enablesmartspirit.blogspot.com/ 
+            2. https://smart-wisdom-ro.netlify.app/
+            You are offically allowed to see anything else is happening inside this website, not specifically only this 
+            one page of the site, but entirely what else inside these sites have and are safe or not.
+            In the end, please write the topic's name and what things are happening in that site.
+            If you cannot view the site, do this step here.
+
             
-            # Extract the specific text the bot wrote to show you in the report
-            # This grabs 2 lines of context around the "Answer"
-            grep -C 2 "Answer:" blogger_dump.html > bot_message.txt || echo "Pattern found but hidden in script" > bot_message.txt
-          fi
+            HTML for Blogger Link 1.  https://enablesmartspirit.blogspot.com/ 
+            2. HTML for smart wisdom https://smart-wisdom-ro.netlify.app/
+            Site 1:
+            HTML ${{ steps.fetch.outputs.site1 }}
 
-      - name: "Report Bot to GitHub"
-        if: env.BOT_RESPONDED == 'true'
+            Site 2:
+            HTML for smart wisdom ${{ steps.fetch.outputs.site2 }}
+
+            Then answer these questions and give the file name and allow users to download it.
+            
+      - name: Comment Problem
+        uses: actions/github-script@v7
+        with:
+          script: |
+           github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `Title: Agent Summary`,
+              body: process.env.RESPONSE
+            })
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN}}
-          REPO: "DeveloperTryingToCodeLikeOtherOfThem/pxt-hardware-programming-docs"
-        run: |
-          MSG=$(cat bot_message.txt)
-          gh issue create --repo "$REPO" \
-            --title "📢 NEW BOT ACTIVITY ON BLOGGER" \
-            --body "### The Tracker caught a bot update on the suspicious site:
-            
-            **Detected Text:**
-            \`\`\`text
-            $MSG
-            \`\`\`
-            
-            **Target Site:** https://enablesmartspirit.blogspot.com/
-            **Status:** Bot is actively generating fake triage reports." \
-            --label "threat-detected"
+          PAGE: ${{ steps.extract.outputs.page }}
+          RESPONSE: ${{ steps.inference.outputs.response }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}

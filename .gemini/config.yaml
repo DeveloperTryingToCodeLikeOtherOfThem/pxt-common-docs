@@ -1,0 +1,3 @@
+code_review:
+  ignore_patterns:
+    - ".github/suspiciousSites.md"
