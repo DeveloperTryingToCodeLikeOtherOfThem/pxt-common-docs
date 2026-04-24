@@ -4,7 +4,7 @@
    control.dmesgPerfCounters();
 ```
 
-Print values of all runtime performance counters into the DMESG debugging buffer.
+Print values of all runtime performance counters into the DMESG.
 
 Counter: a number that increases every time an event occurs.
 
