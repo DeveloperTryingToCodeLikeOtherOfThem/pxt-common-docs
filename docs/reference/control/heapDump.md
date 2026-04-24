@@ -1,4 +1,4 @@
 The feature is unsupported.
 ``` sig
-   control.heapDump
+   control.heapDump();
 ```
