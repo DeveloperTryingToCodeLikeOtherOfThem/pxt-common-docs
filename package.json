@@ -32,6 +32,7 @@
     "docs/reference/control/_onCodeStart.md",
     "docs/reference/control/benchmark.md",
     "docs/reference/control/programHash.md",
+    "docs/reference/control/createBuffer.md",
     "docs/reference/control/dmesgPerfCounters.md",
     "docs/reference/control/_onCodeStop.md",
     "docs/reference/control/__log.md",
