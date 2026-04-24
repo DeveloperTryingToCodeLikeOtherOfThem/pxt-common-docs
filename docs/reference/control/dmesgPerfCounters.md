@@ -6,7 +6,7 @@
 
 Print values of all runtime performance counters into the DMESG.
 
-Counter: a number that increases every time an event occurs.
+The counter is a number that increases every time an event occurs.
 
 ## Example
 ``` ts
