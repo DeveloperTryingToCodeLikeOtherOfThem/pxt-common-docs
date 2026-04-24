@@ -1,5 +1,5 @@
 ## Number Format
-The **Number Format** formats the size of a specificed number.
+The **Number Format** formats the size of a specificed value of the buffer offset.
 ``` sig
    Buffer.sizeOfNumberFormat(NumberFormat.Int8LE);
 ```
