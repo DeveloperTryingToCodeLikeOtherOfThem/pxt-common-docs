@@ -1,5 +1,5 @@
 ## Number Format
-The **Number Format** formats the size of a specificed number of the buffer offset.
+The **Number Format** formats the size of a specificed number of the [buffer](https://github.com/DeveloperTryingToCodeLikeOtherOfThem/pxt-common-docs/blob/master/docs/reference/buffer/create.md) offset.
 ``` sig
    Buffer.sizeOfNumberFormat(NumberFormat.Int8LE);
 ```
