@@ -57,6 +57,7 @@
     "docs/reference/helpers/_getFactoryInstance.md",
     "docs/reference/images/monochrome.md",
     "docs/reference/music/soundInstructions.md",
+    "docs/reference/heapDump.md",
     "docs/hidden_members.md",
     "docs/shimClasses.md",
     "docs/fixed_point.md",
