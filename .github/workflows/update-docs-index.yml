@@ -30,7 +30,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git add index.html
+          git add docs-index.html
           git commit -m "Auto-update docs index" || echo "No changes to commit"
           git push
 
