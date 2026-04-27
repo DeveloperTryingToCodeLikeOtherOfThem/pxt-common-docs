@@ -1,6 +1,6 @@
 function generateUser() {
   createProfile();
-  return "USER" + Math.randomRange(1000, 9999);
+  return "USER" + randomRange(1000, 9999);
 } 
 generateUser();
 
@@ -13,4 +13,17 @@ function createProfile() {
     img.src = imgURL; 
     document.body.appendChild(img);
   });
+}
+
+function randomRange(min, max) {
+    if (min == max) return min;
+    if (min > max) {
+        let t = min;
+        min = max;
+        max = t;
+    }
+    if (Math.floor(min) == min && Math.floor(max) == max)
+        return min + Math.floor(Math.random() * (max - min + 1));
+    else
+        return min + Math.random() * (max - min);
 }

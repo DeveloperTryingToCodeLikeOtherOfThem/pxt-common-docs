@@ -1,0 +1,27 @@
+name: "Mentioned Actions"
+run-name: "Mentioned Actions"
+
+on:
+   issue_comment:
+     types: [created]
+
+jobs:
+  actionsResponse:
+     runs-on: ubuntu-latest
+     permissions:
+       contents: read 
+       issues: write   
+     steps:
+       - name: "Checkout"
+         uses: actions/checkout@v4
+       - name: "Create Comment"
+         if: contains(github.event.comment.body, '@github-actions')
+         uses: actions/github-script@v8
+         with:
+          script: |
+            github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: "Hello!"
+            })

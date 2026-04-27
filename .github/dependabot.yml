@@ -5,6 +5,6 @@ updates:
     schedule:
       interval: "weekly"
     labels:
-      - "dependics"
+      - "dependencies"
       - "javascript" 
       - "typescript"

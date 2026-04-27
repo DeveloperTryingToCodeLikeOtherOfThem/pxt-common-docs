@@ -39,5 +39,5 @@ The function returns a **number** that represents the hash of the current progra
 
 ``` ts
 let hash = control.programHash();
-console.log("Program hash:", hash);
+console.log("Program hash: " + hash);
 ```

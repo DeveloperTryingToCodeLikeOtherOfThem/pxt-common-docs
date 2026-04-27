@@ -4,7 +4,8 @@ Forces the garbage collector and [dump](https://github.com/DeveloperTryingToCode
 ``` sig
    control.gc();
 ```
-* Garbage Collector: Automatically cleans memory
+
+The Garbage Collector automatically cleans memory.
 
 ## Example
 Let us say you want to collect information about the heap when `seconds` equal 100.

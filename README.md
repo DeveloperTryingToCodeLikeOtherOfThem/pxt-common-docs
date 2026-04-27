@@ -1,19 +1,15 @@
-## PXT Harware Programming Docs
+## MakeCode Common Docs
 This repository is a package for more comprensive guides about [Microsoft MakeCode](https://makecode.com/) 
-This package does **not** connect to MakeCode's offical runtime docs, which is why I mentioned previously 
-what this repository is about.
+This package does **not** connect to MakeCode's offical runtime docs. It is useful for helping you find more documentations you are confused with and undocumented documentations, such as
+`programHash` and `programName.`
 
 ## Support
-This extension **does not** work in any MakeCode editor because of the issues that were encountered in pxt.json. 
-Because of that, you have to review everything here instead. Also, tags and releases will still be updated, so do **not** worry about that. If you have any questions about this repository, please click on this link here. [Issues: Click Here](https://github.com/DeveloperTryingToCodeLikeOtherOfThem/pxt-hardware-programming-docs/issues). Please do **not** worry if you have questions because it is part of this repository too.
+This repository used to be an extension instead of a package, but now it does **not** work in any MakeCode editor. This is because of the issues that were encountered in pxt.json. So now, review everything here instead. Also, tags and releases will still be updated, so do **not** worry about that. If you have any questions about this repository, please click on this link here. [Issues](https://github.com/DeveloperTryingToCodeLikeOtherOfThem/pxt-hardware-programming-docs/issues) Please do **not** worry if you have questions because it is part of this repository too.
 
 
 ## Patience for this repository
 Please be patient because I am the **only collaborator plus contributor** for now doing this work.
-If you feel there needs improvements in the documentations, please write the issue. Also, if you think you can fix the bug by your own,
-make a pull request and I will approve the checks if it is appropriate and not incorrect information.
-You will be a contributor if you did write a pull request by yourself and is approved. There are indeed 4 other contributors in this repository, 
-but they are bots doing the work for this repository.
+If you feel there needs improvements in the documentations, please write the issue.
 
 **If you feel this repository's triage is limited, file an issue on a specific PXT target.
 For instance, you have to still make sure the topic is on topic and nothing off topic related things.**
@@ -36,4 +32,4 @@ If you ever followed a link here from a 'Best Answer' site copying an issue of m
 
 <img width="703" height="127" alt="image" src="https://github.com/user-attachments/assets/36cf399e-3b53-40dd-9999-b141b548e815" />
 
-**You may wish to find a link for convenience for viewing these files, which you can find here. [PXT-Hardware-Programming-Docs](https://developertryingtocodelikeotherofthem.github.io/pxt-hardware-programming-docs/)**
+[PXT-Common-Docs](https://developertryingtocodelikeotherofthem.github.io/pxt-common-docs/)

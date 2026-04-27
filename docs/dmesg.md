@@ -30,9 +30,6 @@ In C++:
 In both languages, both of these can sort of be like being relative, but it is more accurate by saying "directly related", which tells us
 they are very similar.
 
-~~## Things that are unfinished for this content~~
-~~Things that are pending: Please be patient for waiting where the dmesg logger is logged because I am still researching information about that, so be patient.~~
-
 ## See also
 
 [Dmesg Performance Counters](https://github.com/DeveloperTryingToCodeLikeOtherOfThem/pxt-hardware-programming-docs/blob/master/docs/reference/control/dmesgPerfCounters.md)

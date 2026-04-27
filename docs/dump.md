@@ -1,9 +1,9 @@
 ## Dump
 
-Spits out raw information so you inspect it.
+A dump spits out raw information so you inspect it.
 
 Dumps include memory dumping, stack dumping, variable dumping, debug dumping, 
-DMESG dumping, and more.
+DMESG dumping, etc.
 
 ## Example
 
@@ -19,5 +19,4 @@ DMESG dumping, and more.
 // Dump the sprite's internal data
 console.log("Sprite dump:")
 console.log(player)
-
 ```
