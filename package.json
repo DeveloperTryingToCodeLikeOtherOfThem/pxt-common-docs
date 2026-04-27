@@ -79,6 +79,7 @@
     "docs/implementingAnIndexSignature.md",
     "docs/target_panic.md",
     "docs/blame.md",
+    "docs/JavaScript/loops/raw_for_loops.md",
     "docs/fileBytes.md",
     "docs/cache.md",
     "docs/units/bytes.md",
