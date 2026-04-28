@@ -93,7 +93,6 @@
     "docs/exportModifier.md",
     "docs/memory.md",
     "docs/decoder.md",
-    "docs/reading-makecode-docs-clearly.md",
     "docs/panic_core.md",
     "docs/mixed-arrays.md",
     "docs/shimArguments.md",
