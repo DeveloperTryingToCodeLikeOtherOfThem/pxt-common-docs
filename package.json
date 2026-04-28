@@ -84,6 +84,7 @@
     "docs/units/bytes.md",
     "docs/units/binary.md",
     "docs/units/binRange.md",
+    "docs/units/unary.md",
     "docs/helpers.md",
     "docs/fixedArray.md",
     "docs/hardware.md",
@@ -98,7 +99,6 @@
     "docs/shimArguments.md",
     "docs/assertion_failure.md",
     "docs/js/pxtJSDocumentation.md",
-    "docs/unary.md",
     "docs/dump.md"
   ],
   "dependencies": {
