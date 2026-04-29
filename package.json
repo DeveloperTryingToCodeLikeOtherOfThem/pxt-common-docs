@@ -46,6 +46,7 @@
     "docs/reference/game/removeScenePushHandler.md",
     "docs/reference/buffer/getNumber.md",
     "docs/reference/buffer/setNumber.md",
+    "docs/reference/buffer/fromUTF8.md",
     "docs/reference/buffer/indexOf.md",
     "docs/reference/buffer/hash.md",
     "docs/reference/buffer/write.md",
