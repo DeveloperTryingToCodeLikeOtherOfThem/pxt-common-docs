@@ -16,7 +16,6 @@
     "generate-docs-index": "node ./scripts/generate-docs-index.js"
   },
   "files": [
-    "docs/limit_of_offsets_for_setNumber.md",
     "docs/test/test.md",
     "docs/shim.md",
     "docs/buffers_vs_arrays.md",
