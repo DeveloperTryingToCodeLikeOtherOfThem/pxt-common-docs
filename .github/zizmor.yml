@@ -1,9 +1,3 @@
-# Zizmor security scanner configuration
-# This file configures which security findings to ignore for specific workflows
-#
-# Note: workflow_run triggers in ci-doctor and dev-hawk now use inline annotations
-# and no longer need manual suppressions here.
-
 rules:
   dangerous-triggers:
     ignore:
