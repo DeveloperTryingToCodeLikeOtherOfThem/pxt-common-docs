@@ -1,5 +1,0 @@
-rules:
-  dangerous-triggers:
-    ignore:
-      # Smoke Detector - monitors smoke test failures
-      - smoke-detector.lock.yml:53
