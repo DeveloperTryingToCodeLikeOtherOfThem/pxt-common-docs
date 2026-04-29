@@ -7,3 +7,4 @@ There are only 2 ways of ordering, which are little and big endian.
 
 ### ~hint
 An endian order must have at least a group of 2 bytes.
+~
