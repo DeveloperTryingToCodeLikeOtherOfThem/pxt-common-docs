@@ -6,5 +6,7 @@ There are only 2 ways of ordering, which are little and big endian.
 * **Big Endian (BE)** stores the most significant byte at the lowest address, it is meant for human readability.
 
 ### ~hint
+
 An endian order must have at least a group of 2 bytes.
+
 ~
