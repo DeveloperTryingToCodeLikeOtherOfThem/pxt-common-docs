@@ -287,4 +287,7 @@
 ``` html
    <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"></head><body><p>Anonymous Proxy detected.</p></body></html>
 ```
+<img width="1128" height="636" alt="image" src="https://github.com/user-attachments/assets/24f9dcfa-6df6-4408-8b5f-5ebae4405edc" />
+
+
 **If you ever encountered any website have this structure, exit out immediately. Do NOT click it.**
