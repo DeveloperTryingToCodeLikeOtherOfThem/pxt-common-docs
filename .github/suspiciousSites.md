@@ -287,6 +287,13 @@
 ``` html
    <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"></head><body><p>Anonymous Proxy detected.</p></body></html>
 ```
+``` html
+   <div class="wrapper">
+        <div class="top_wrapper">
+            <h1 id="a2">Attention!</h1>
+            <p id="a3">Please Install the VPN App to continue watching in safe mode.</p>
+        </div>
+```
 <img width="1128" height="636" alt="image" src="https://github.com/user-attachments/assets/24f9dcfa-6df6-4408-8b5f-5ebae4405edc" />
 
 
