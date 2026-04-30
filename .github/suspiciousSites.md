@@ -283,4 +283,8 @@
       </div>
     `);`
 ```
+
+``` html
+   <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"></head><body><p>Anonymous Proxy detected.</p></body></html>
+```
 **If you ever encountered any website have this structure, exit out immediately. Do NOT click it.**
