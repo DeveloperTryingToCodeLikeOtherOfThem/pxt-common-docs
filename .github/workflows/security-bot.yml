@@ -28,17 +28,21 @@ jobs:
           # Also look for any USER#### IDs appearing on the page
           if grep -qE "Answer:|USER[0-9]{4}|failed" blogger_dump.html; then
             echo "BOT_RESPONDED=true" >> $GITHUB_ENV
+
+            If you cannot search the site, read this sample instead.
+            USER6776
+            Explanation:
             
             # Extract the specific text the bot wrote to show you in the report
             # This grabs 2 lines of context around the "Answer"
-            grep -C 2 "Answer:" blogger_dump.html > bot_message.txt || echo "Pattern found but hidden in script" > bot_message.txt
+            grep -C 2 "Answer:" or " Explanation:" blogger_dump.html > bot_message.txt || echo "Pattern found but hidden in script" > bot_message.txt
           fi
 
       - name: "Report Bot to GitHub"
         if: env.BOT_RESPONDED == 'true'
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN}}
-          REPO: "DeveloperTryingToCodeLikeOtherOfThem/pxt-hardware-programming-docs"
+          REPO: "DeveloperTryingToCodeLikeOtherOfThem/pxt-common-docs"
         run: |
           MSG=$(cat bot_message.txt)
           gh issue create --repo "$REPO" \
