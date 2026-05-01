@@ -94,10 +94,10 @@
     "docs/memory.md",
     "docs/decoder.md",
     "docs/panic_core.md",
-    "docs/mixed-arrays.md",
     "docs/shimArguments.md",
     "docs/assertion_failure.md",
     "docs/js/pxtJSDocumentation.md",
+    "docs/map.md",
     "docs/dump.md"
   ],
   "dependencies": {
