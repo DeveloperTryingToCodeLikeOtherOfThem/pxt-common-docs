@@ -17,7 +17,7 @@ jobs:
      
       - name: Search for Repository
         id: search
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         with:
           script: |
             const owner = context.repo.owner;
@@ -40,7 +40,7 @@ jobs:
             core.setOutput("message", message);
 
       - name: Comment on issue with results
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         with:
           script: |
             const body = `### 🔍 Automated Search Results\n${process.env.SEARCH_MESSAGE}`;
