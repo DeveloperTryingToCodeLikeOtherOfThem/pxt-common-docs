@@ -60,6 +60,7 @@
     "docs/hidden_members.md",
     "docs/javascript/loops/infinite_for_loops.md",
     "docs/javascript/indexSignatureSyntax.md",
+    "docs/javascript/map.md",
     "docs/shimClasses.md",
     "docs/fixed_point.md",
     "docs/panic.md",
@@ -97,7 +98,6 @@
     "docs/shimArguments.md",
     "docs/assertion_failure.md",
     "docs/js/pxtJSDocumentation.md",
-    "docs/map.md",
     "docs/dump.md"
   ],
   "dependencies": {
