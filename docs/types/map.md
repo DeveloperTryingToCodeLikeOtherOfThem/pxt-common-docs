@@ -5,3 +5,4 @@ Additionally, the key must be either a number or string, while the value type ca
 ``` ts
     const myMap = {[index: string]: number};
 ```
+ 
