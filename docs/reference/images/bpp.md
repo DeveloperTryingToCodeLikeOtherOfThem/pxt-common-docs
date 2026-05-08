@@ -9,3 +9,5 @@ for getting how many bits per pixel:
        return this.palette.length > 2 ? 4 : 1
    }
 ```
+
+Additionally, if the palette's length is not greater than 2, it will be monochrome.
