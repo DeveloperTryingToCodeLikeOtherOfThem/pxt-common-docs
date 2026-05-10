@@ -1,0 +1,64 @@
+# Similar to the Copilot Triage Agent
+name: Copilot Issue Helper
+
+on:
+  issues:
+    types: [opened, edited, reopened]
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  process_issue:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Summarize issue with Copilot
+        id: summary
+        uses: github/copilot-actions/summarize@v1
+        with:
+          text: |
+            Title: ${{ github.event.issue.title }}
+            Body: ${{ github.event.issue.body }}
+
+      - name: Suggest labels with Copilot
+        id: labels
+        uses: github/copilot-actions/label@v1
+        with:
+          text: |
+            Title: ${{ github.event.issue.title }}
+            Body: ${{ github.event.issue.body }}
+
+      - name: Apply labels
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const labels = ${{ steps.labels.outputs.labels }};
+            if (labels && labels.length > 0) {
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                labels
+              });
+            }
+
+      - name: Comment summary
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: [
+                "### 🤖 Copilot Summary",
+                "",
+                `${{ steps.summary.outputs.summary }}`,
+                "",
+                "_Generated automatically by Copilot Actions._"
+              ].join("\n")
+            })
