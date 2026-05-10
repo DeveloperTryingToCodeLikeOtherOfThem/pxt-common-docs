@@ -7,4 +7,5 @@ declare namespace control {
 }
 
 //% help=github:pxt-hardware-programming-docs/docs/buffers
-declare namespace Buffer {}
+declare namespace Buffer { }
+ 
