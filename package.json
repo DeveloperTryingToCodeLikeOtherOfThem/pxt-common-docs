@@ -84,6 +84,7 @@
     "docs/cache.md",
     "docs/help_annotation.md",
     "docs/types/map.md",
+    "docs/assertion.md",
     "docs/hardware.md",
     "docs/function-output.md",
     "docs/history-of-bytes.md",
@@ -91,7 +92,6 @@
     "docs/memory.md",
     "docs/decoder.md",
     "docs/shimArguments.md",
-    "docs/assertion_failure.md",
     "docs/js/pxtJSDocumentation.md",
     "docs/unary.md",
     "docs/dump.md"
