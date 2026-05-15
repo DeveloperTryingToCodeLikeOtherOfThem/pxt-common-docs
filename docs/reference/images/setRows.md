@@ -7,7 +7,7 @@ Sets rows using a buffer.
 ## Parameters
 * **x:** the starting offset of the buffer
 
-* **src:** The **raw data**  of image.
+* **src:** the **raw data**  of image.
 
 ## Example
 Fill the screen in dark blue. 
