@@ -71,6 +71,7 @@
     "docs/fixed-size.md",
     "docs/developers/bannerImpl.md",
     "docs/developers/core/soft_panic.md",
+    "docs/developers/core/image.md",
     "docs/developers/core/throwFunction.md",
     "docs/developers/core/localizeFormat.md",
     "docs/developers/core/implOfOperators.md",
