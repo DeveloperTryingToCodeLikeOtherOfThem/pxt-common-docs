@@ -13,7 +13,7 @@ is 48, the color's value automatically is transparent
 if the color has not been setted.
 
 ## Example
-Replace the screen palette's first color and keep the other colors are transparent.
+Replace the screen palette's first color and keep the other colors transparent.
 
 ``` ts
     const buf = Buffer.create(48); 
