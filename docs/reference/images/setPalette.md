@@ -8,7 +8,9 @@ Sets the screen's palette.
 A color is formed by 3 indices of a buffer.
 
 The buffer's size requires to be 48 because
-of the engine's 16 colors.
+of the engine's 16 colors. While the size
+is 48, the color's value automatically is transparent
+if the color has not been setted.
 
 ## Example
 Replace the screen palette's first color.
