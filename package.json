@@ -26,6 +26,7 @@
     "docs/reference/game/removeScenePushHandler.md",
     "docs/reference/game/pushScene.md",
     "docs/reference/game/eventContext.md",
+    "docs/reference/game/addScenePopHandler.md",
     "docs/reference/game/addScenePushHandler.md",
     "docs/reference/game/currentScene.md",
     "docs/reference/game/popScene.md",
