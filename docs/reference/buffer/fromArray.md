@@ -9,4 +9,4 @@ Allocates a new buffer from a dynamic array into bytes.
 
 ## Example
 Set an array that have 5 indices into a buffer.
-Buffer.create([0, 1, 2, 3, 4])
+Buffer.fromArray([0, 1, 2, 3, 4])
