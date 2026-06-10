@@ -70,6 +70,7 @@
     "docs/reference/buffer/setNumber.md",
     "docs/reference/buffer/bytes.md",
     "docs/reference/buffer/getNumber.md",
+    "docs/reference/buffer/fromArray.md",
     "docs/reference/buffer/numberFormat.md",
     "docs/reference/buffer/create.md",
     "docs/reference/buffer/binary.md",
