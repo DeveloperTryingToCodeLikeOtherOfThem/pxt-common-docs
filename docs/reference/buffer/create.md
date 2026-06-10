@@ -13,7 +13,7 @@ The meaning comes from how you write or read the bytes, such as using:
 * Buffer methods like setNumber to store structured values
 
 ## Example
-Store 100 bytes.
+Store 100 bytes into memory.
 ``` ts
     const buf = Buffer.create(100);
 ```
