@@ -98,8 +98,7 @@
     "docs/reference/control/setDebugFlags.md",
     "docs/reference/control/createBuffer.md",
     "docs/reference/control/programHash.md",
-    "docs/cache.md",
-    "docs/fileBytes.md"
+    "docs/cache.md"
   ],
   "dependencies": {
     "@github/copilot": "^1.0.11"
