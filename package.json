@@ -51,6 +51,7 @@
     "docs/types/map.md",
     "docs/fixed-size.md",
     "docs/js/pxtJSDocumentation.md",
+    "docs/hardware/cache.md",
     "docs/dmesg.md",
     "docs/assertion.md",
     "docs/cpp/accessMembersInANS.md",
@@ -97,8 +98,7 @@
     "docs/reference/control/__log.md",
     "docs/reference/control/setDebugFlags.md",
     "docs/reference/control/createBuffer.md",
-    "docs/reference/control/programHash.md",
-    "docs/cache.md"
+    "docs/reference/control/programHash.md"
   ],
   "dependencies": {
     "@github/copilot": "^1.0.11"
