@@ -12,7 +12,7 @@ jobs:
         issues: read
      steps:
        - name: Checkout Repository
-         uses: actions/checkout@v4
+         uses: actions/checkout@v7
 
        - name: notifyInLog
          run: |
