@@ -57,7 +57,6 @@
     "docs/cpp/accessMembersInANS.md",
     "docs/panic.md",
     "docs/memory.md",
-    "docs/projects/destroy-all-sprites.md",
     "docs/reference/core/pxtbase.h.md",
     "docs/reference/images/bpp.md",
     "docs/reference/images/setRows.md",
@@ -98,7 +97,8 @@
     "docs/reference/control/__log.md",
     "docs/reference/control/setDebugFlags.md",
     "docs/reference/control/createBuffer.md",
-    "docs/reference/control/programHash.md"
+    "docs/reference/control/programHash.md",
+    "docs/tutorials/destroy-all-sprites.md"
   ],
   "dependencies": {
     "@github/copilot": "^1.0.11"
