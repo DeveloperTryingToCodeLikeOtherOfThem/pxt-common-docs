@@ -1,11 +1,12 @@
 ## getConfigValue
-Gets the configure's value.
+
 ``` sig
     getConfigValue(null, null);
 ```
 
 ## Parameters
 **key:** the configure's id
+
 **defl:** the configure's value
 
 ## Example
