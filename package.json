@@ -94,6 +94,7 @@
     "docs/reference/control/_onCodeStop.md",
     "docs/reference/control/heapDump.md",
     "docs/reference/control/_onCodeStart.md",
+    "docs/reference/control/getConfigValue.md",
     "docs/reference/control/__log.md",
     "docs/reference/control/setDebugFlags.md",
     "docs/reference/control/createBuffer.md",
